@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+
+    environment:
+    # - NODE_ENV=production  # изменяем режим на продакшн
+    # command: yarn build  # изменяем команду на сборку для продакшн
+    # tty: true
+      - NODE_ENV=development
+    command: yarn dev
