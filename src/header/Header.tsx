@@ -6,7 +6,7 @@ export const Header = () => {
     <header className={styles.header}>
       <div className={styles.content}>
         {/* <React className={`w-12 h-12 `}/> */}
-        <h2 className={styles.logo}>_ARSTM_</h2>
+        <h2 className={styles.logo}>{'${_ARSTM_}'}</h2>
       </div>
       <nav className={styles.nav}>
         <button className={styles.button}>ОБО МНЕ</button>
