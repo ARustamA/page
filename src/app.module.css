@@ -2,14 +2,17 @@
   @apply font-roboto h-dvh w-full;
 }
 .main {
-  @apply w-full h-full flex flex-col;
+  @apply w-full h-full flex flex-col overflow-hidden;
 }
 
-.text_h2{
-  @apply text-9xl
+.text_h2 {
+  @apply text-9xl py-10;
+}
+.span {
+  @apply h-1 bg-red-400 w-72 
 }
 .body {
-  @apply w-full h-dvh flex items-center justify-center text-slate-400  cursor-default;
+  @apply w-full flex flex-col items-center justify-center text-slate-400  cursor-default;
 }
 
 .mask {
@@ -22,6 +25,4 @@
   background: #ec4e39;
   position: absolute;
   color: black;
-
 }
-

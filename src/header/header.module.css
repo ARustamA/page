@@ -1,13 +1,27 @@
+/* header.module.css */
+
 .header {
-  @apply h-16 bg-black999  w-full backdrop-filter backdrop-blur-sm lg:backdrop-blur-md
-  flex items-center justify-between  px-16 py-4
+  @apply h-16 bg-black999 w-full backdrop-filter backdrop-blur-sm lg:backdrop-blur-md
+  flex items-center justify-between px-16 py-4;
+  transition: transform 0.3s; /* Добавляем плавную анимацию только для transform */
 }
+
+.scrolled-left {
+  transform: translateX(-100%); /* Скрываем хедер влево */
+}
+
+.scrolled-right {
+  transform: translateX(100%); /* Скрываем хедер вправо */
+}
+
 .content {
   @apply container px-16 py-4;
 }
-.nav{
-  @apply text-sm flex items-center gap-5
+
+.nav {
+  @apply text-sm flex items-center gap-5;
 }
-.button{
-  @apply w-full hover:text-main_red whitespace-nowrap
+
+.button {
+  @apply w-full hover:text-main_red whitespace-nowrap;
 }

@@ -1,7 +1,7 @@
 
 section {
-  padding-top: 85vh;
-  padding-bottom: 85vh;
+  padding-top: 65vh;
+  padding-bottom: 100vh;
   position: relative;
 }
 
@@ -13,6 +13,7 @@ section {
   white-space: nowrap;
   display: flex;
   flex-wrap: nowrap;
+  
 }
 
 .parallax .scroller {
@@ -28,4 +29,5 @@ section {
 .parallax span {
   display: block;
   margin-right: 30px;
+  color:cadetblue
 }
