@@ -5,14 +5,37 @@
   @apply w-full h-full flex flex-col overflow-hidden;
 }
 
-.text_h2 {
-  @apply text-9xl py-10;
+.text_secret {
+  @apply text-xl border-b border-dotted border-blue-300;
+
+}
+
+.typing_demo {
+  width: 18ch;
+  animation: typing 2s steps(17), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 .span {
-  @apply h-1 bg-red-400 w-72 
+  @apply h-1 bg-red-400 w-72;
 }
 .body {
-  @apply w-full flex flex-col items-center justify-center text-slate-400  cursor-default;
+  @apply w-full flex flex-col items-center justify-center text-slate-400  cursor-default text-5xl py-10;
 }
 
 .mask {

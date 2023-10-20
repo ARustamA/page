@@ -3,14 +3,14 @@ import { useEffect, useState } from 'react';
 import styles from './header.module.css';
 
 export const Header = () => {
-  const [scrollDirection, setScrollDirection] = useState(null);
+  const [scrollDirection, setScrollDirection] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        setScrollDirection('scrolled_left'); // Прокрутка вниз - скрываем влево
+        setScrollDirection('transform translate-y-[-100%] transition-transform duration-300'); // Прокрутка вниз - скрываем влево
       } else {
-        setScrollDirection('scrolled_right'); // Вернуть в исходное положение
+        setScrollDirection('transform translate-y-0 transition-transform duration-300'); // Вернуть в исходное положение
       }
     };
 
@@ -23,7 +23,6 @@ export const Header = () => {
   return (
     <header className={`${styles.header} ${scrollDirection}`}>
       <div className={styles.content}>
-        {/* <React className={`w-12 h-12 `}/> */}
         <h2 className={styles.logo}>{'${_ARSTM_}'}</h2>
       </div>
       <nav className={styles.nav}>
