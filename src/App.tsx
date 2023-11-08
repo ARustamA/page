@@ -12,7 +12,7 @@ function App(): JSX.Element {
   const size = isHovered ? 400 : 40;
 
   return (
-    <main className={styles.main}>
+    <main className="">
       <Header />
 
       <motion.div
@@ -25,7 +25,7 @@ function App(): JSX.Element {
         }}
         transition={{ type: 'tween', ease: 'backOut', duration: 0.5 }}>
         <p
-          className="text-6xl w-screen-xl py-20 px-16 "
+          className="text-2xl xl:text-5xl xl:w-screen-xl py-10 px-4 lg:py-24 lg:px-16 "
           onTouchStart={() => {
             setIsHovered(true);
           }}
@@ -47,12 +47,16 @@ function App(): JSX.Element {
 
         <span className="flex items-center gap-5 ">
           <span className={styles.span}></span>
-          <span className={styles.text_secret}>Открыть секрет</span>
+          <span className={`${styles.text_secret} ${styles.secret_animate}`}>Открыть секрет</span>
           <span className={styles.span}></span>
         </span>
       </div>
+      <div className="max-w-7xl mx-auto mt-20">
+        <h2>f</h2>
+      </div>
       <section className={styles.section}>
         <ParallaxText baseVelocity={-5}>Framer Motion</ParallaxText>
+
         <ParallaxText baseVelocity={5}>Scroll velocity</ParallaxText>
       </section>
     </main>
