@@ -1,6 +1,4 @@
-.text_secret {
-  @apply lg:text-xl border-b border-dotted border-blue-300 whitespace-nowrap;
-}
+
 .secret_animate {
   animation: pulse 1.5s infinite alternate-reverse;
 }
@@ -23,7 +21,7 @@
   border-right: 3px solid;
   font-family: monospace;
   font-size: 2em;
-  
+  padding-top: 30px;
 }
 
 @keyframes typing {
@@ -37,23 +35,19 @@
     border-color: transparent;
   }
 }
-.span {
-  @apply h-1 bg-red-400 w-20 sm:w-32 lg:w-72;
-}
-.body {
-  @apply w-full flex flex-col items-center justify-center text-slate-400 
-   cursor-default lg:text-5xl py-10;
-}
+
+
 
 .mask {
-  top: 4rem;
+  top: 0;
   left: 0;
-  z-index: 5;
-  mask-image: url('./assets/icons/mask.svg');
+  z-index: 1;
+  mask-image: url('./../../assets/icons/mask.svg');
   mask-repeat: no-repeat;
   mask-size: 40px;
   background: #ec4e39;
   position: absolute;
   color: black;
-  cursor: cell
+  cursor: cell;
+  border-radius:  15rem;
 }
