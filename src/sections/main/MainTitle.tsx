@@ -17,7 +17,7 @@ function MainTitle() {
       className={styles.mask}
       animate={{
         WebkitMaskPosition: `${x !== null ? x - size / 1.1 : 0}px ${
-          y !== null ? y - size / 1.1 : 0
+          y !== null ? y - size / 1.3 : 0
         }px`,
         WebkitMaskSize: `${size}px`
       }}
@@ -42,7 +42,7 @@ function MainTitle() {
 
     <div
       className={`w-full flex flex-col items-center justify-center text-slate-400 
-    cursor-default lg:text-5xl  `}>
+     lg:text-5xl  `}>
       <div className={styles.typing_demo}>Frontend developeR</div>
 
       <span className="flex items-center gap-5 ">
