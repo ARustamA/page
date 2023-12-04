@@ -1,5 +1,4 @@
 import { BackgroundCanvas } from "../background/Background";
-import { ScrollMouse } from "../components/ScrollMouse/ScrollMouse";
 
 const WelcomeSection = () => {
   return (
@@ -8,7 +7,6 @@ const WelcomeSection = () => {
         <p className="text-2xl lg:text-5xl typingHello">Добро пожаловать</p>
       </div>
       <BackgroundCanvas />
-      <ScrollMouse />
     </div>
   );
 };

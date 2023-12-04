@@ -23,7 +23,7 @@ module.exports = {
 
         'main-blue': '#CEFDFF',
         'second-blue': '#E6F2F7',
-        'main_red': '#E1492E',
+        'main_red': '#d14020',
         // 'middle_red': '#E93117',
         // 'second_red': '#f12400',
 

@@ -3,51 +3,30 @@ import { MainTitle } from './sections/main/MainTitle';
 import { Header } from './sections/header/Header';
 
 import { motion } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect,  useState } from 'react';
 import { WelcomeSection } from './sections/WelcomSection';
+import { Github } from './components/Github';
+import { ScrollMouse } from './components/ScrollMouse/ScrollMouse';
 
 function App(): JSX.Element {
-  const [hiddenWelcomeBlock, setHiddenWelcomeBlock] = useState(true);
 
-  const targetRef = useRef<HTMLDivElement>(null);
-  const scrollToTarget = () => {
-    if (targetRef) {
-      targetRef.current?.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-
-      const addTimer = () => {
-        const hideTimer = setTimeout(() => {
-          scrollToTarget();
-        }, 15000);
-
-        return () => {
-          clearTimeout(hideTimer);
-        };
-      };
-      addTimer();
-      const hiddenHelloBlock = () => {
-        setHiddenWelcomeBlock(true);
-
-        const hideTimer = setTimeout(() => {
-          setHiddenWelcomeBlock(false);
-          scrollToTarget();
-        }, 16000);
-
-        return () => {
-          clearTimeout(hideTimer);
-        };
-      };
-      hiddenHelloBlock();
- 
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 5000);
   }, []);
-
+  // https://github.com/soumyajit4419/Portfolio
+  // https://github.com/smakosh/next-portfolio-dev
   return (
     <>
-      {hiddenWelcomeBlock && <WelcomeSection />}
-
-      <motion.div className={` w-screen min-h-screen h-screen `} ref={targetRef}>
+      {isLoading ? <WelcomeSection />
+      :
+      (
+        <> 
+  
+        <motion.div className={` w-screen min-h-screen  `}>
         <Header />
         <motion.main className={`max-w-7xl mx-auto pt-7`}>
           <MainTitle />
@@ -79,9 +58,12 @@ function App(): JSX.Element {
               <p>d</p>
             </div>
           </div>
+      <ScrollMouse />
+
         </motion.main>
       </motion.div>
       <motion.div className={` w-screen min-h-screen h-screen `}>
+      <Github />
         <p>greeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
       </motion.div>
       <div className={`pt-96`}>
@@ -91,6 +73,10 @@ function App(): JSX.Element {
       <div className="max-w-7xl mx-auto h-screen">
         <p>gre</p>
       </div>
+        </>
+      )}
+
+     
     </>
   );
 }

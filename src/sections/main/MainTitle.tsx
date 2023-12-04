@@ -45,14 +45,14 @@ function MainTitle() {
      lg:text-5xl  `}>
       <div className={styles.typing_demo}>Frontend developeR</div>
 
-      <span className="flex items-center gap-5 ">
+      {/* <span className="flex items-center gap-5 ">
         <span className='h-1 bg-red-400 w-20 sm:w-32 lg:w-72'></span>
         <span
           className={`lg:text-xl border-b border-dotted border-blue-300 whitespace-nowrap ${styles.secret_animate}`}>
           Тут секрет
         </span>
         <span className='h-1 bg-red-400 w-20 sm:w-32 lg:w-72'></span>
-      </span>
+      </span> */}
     </div>
   </motion.div>
    );

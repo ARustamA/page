@@ -6,31 +6,25 @@ export const ScrollMouse = () => {
 
   useEffect(() => {
     const showAndHide = () => {
-      // Показать компонент
       setShowScroll(true);
 
-      // Установить таймер на скрытие через 10 секунд
       const hideTimer = setTimeout(() => {
         setShowScroll(false);
       }, 15000);
 
       return () => {
-        // Очистить таймер на скрытие при размонтировании компонента
         clearTimeout(hideTimer);
       };
     };
 
-    // Запустить showAndHide через 3 секунды
     const initialTimer = setTimeout(() => {
       showAndHide();
-    }, 3000);
+    }, 7000);
 
-    // Установить интервал для периодического вызова showAndHide каждую минуту
     const interval = setInterval(() => {
       showAndHide();
-    }, 60000); // 60000 миллисекунд = 1 минута
+    }, 60000); 
 
-    // Очистить таймеры и интервал при размонтировании компонента
     return () => {
       clearTimeout(initialTimer);
       clearInterval(interval);
