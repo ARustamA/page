@@ -43,7 +43,7 @@ function MainTitle() {
     <div
       className={`w-full flex flex-col items-center justify-center text-slate-400 
      lg:text-5xl  `}>
-      <div className={styles.typing_demo}>Frontend developeR</div>
+      <div className={styles.typing_demo}>Ахметьянов Рустам</div>
 
       {/* <span className="flex items-center gap-5 ">
         <span className='h-1 bg-red-400 w-20 sm:w-32 lg:w-72'></span>

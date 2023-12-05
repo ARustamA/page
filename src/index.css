@@ -19,7 +19,7 @@
   height: 100dvh;
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(to left, rgb(42, 14, 104),rgb(32, 4, 94), rgb(6, 0, 20));
+  background-image: linear-gradient(to left, rgb(42, 14, 104), rgb(32, 4, 94), rgb(6, 0, 20));
 
   color: rgba(255, 237, 237, 0.87);
   /* background-color: #4ac0c0; */
@@ -31,15 +31,13 @@
   -webkit-text-size-adjust: 100%;
 }
 
-
 ::-webkit-scrollbar {
   width: 7px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background:  #1F1F1F
-
+  background: #1f1f1f;
 }
 
 /* Handle */
@@ -134,9 +132,7 @@
 }
 .typingHello {
   width: 14ch;
-  animation:
-    typing 2s steps(16),
-    blink 0.4s step-end infinite alternate;
+  animation: typing 2s steps(16), blink 0.4s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
@@ -160,43 +156,42 @@
   animation: fadeIn 5.5s ease forwards;
 }
 .fadeInText {
-	opacity: 0;
-	animation: fadeInText 2s ease forwards 3s;
+  opacity: 0;
+  animation: fadeInText 2s ease forwards 3s;
 }
 @keyframes fadeInText {
-	from {
-		opacity: 0;
-		transform: translateY(50%);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0%);
-	}
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
 @keyframes fadeIn {
-	from {
-		opacity: 0;
-		transform: translateY(0%);
+  from {
+    opacity: 0;
+    transform: translateY(0%);
     scale: 100%;
-	}
-	to {
-		opacity: 1;
-		/* transform: translateY(-100%); */
+  }
+  to {
+    opacity: 1;
+    /* transform: translateY(-100%); */
     scale: 50%;
-
-	}
+  }
 }
 @keyframes animateBlock {
-	0% {
-		transform: scale(0, 0.005);
-	}
-	50% {
-		transform: scaleY(0.005);
-	}
-	100% {
-		transform: scale(1, 1);
-	}
+  0% {
+    transform: scale(0, 0.005);
+  }
+  50% {
+    transform: scaleY(0.005);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 
 .stickyHeader {
@@ -206,8 +201,45 @@
 .navbarHeader {
   position: fixed !important;
   transition: all 0.3s ease-out 0s !important;
-  box-shadow: 0px 10px 20px 0px rgba(243, 113, 27, 0.171) !important;
-  opacity: 75%;
+  box-shadow: 0px 10px 20px 0px rgba(231, 224, 219, 0.171) !important;
   font-size: 1.2rem !important;
+  opacity: 75%;
   z-index: 20;
+}
+
+
+
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }

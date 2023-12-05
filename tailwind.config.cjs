@@ -20,6 +20,7 @@ module.exports = {
         'black900': '#1F1F1F',
         'black999': '#121212',
 
+        'blue-light': '#0BA3D1',
 
         'main-blue': '#CEFDFF',
         'second-blue': '#E6F2F7',

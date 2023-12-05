@@ -1,10 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
-const ITEMS = ['ОБО МНЕ', 'НАВЫКИ', 'ОПЫТ', 'РЕЗЮМЕ', 'ПОРТФОЛИО','КОНТАКТЫ' ];
+const ITEMS = ['ОБО МНЕ', 'НАВЫКИ', 'ОПЫТ', 'РЕЗЮМЕ', 'ПОРТФОЛИО', 'КОНТАКТЫ'];
 const buttonStyle = ` hover:text-main_red hover:scale-125 whitespace-nowrap transition-all`;
 
 export const Header = () => {
-  const headerRef = useRef<HTMLElement>(null);
   const [navColor, updateNavbar] = useState(false);
   const targetRef = useRef<HTMLDivElement>(null);
 
@@ -23,31 +22,30 @@ export const Header = () => {
     };
   }, []);
 
-
-  const scrollToTarget = () => {
-    if (targetRef) {
-      targetRef.current?.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  // const scrollToTarget = () => {
+  //   if (targetRef) {
+  //     targetRef.current?.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // };
 
   return (
     <header
- 
-      className={`h-16  bg-slate-900  flex items-center justify-between 
-      
-        ${!navColor ? "stickyHeader" : "navbarHeader transition-all" }
-      px-4 sm:px-16 py-4 gap-5 w-full`}>
+      className={`  flex items-center justify-between  px-4 sm:px-16 py-4 gap-5 w-full
+        ${!navColor ? 'stickyHeader' : 'navbarHeader transition-all bg-slate-900 '}
+     `}>
       <button className=" cursor-cell text-xs sm:text-lg">
-        <span><span className="text-main_red ">R</span></span>
-        STM 🧑‍💻
+        <span className='whitespace-nowrap'>
+          <span className="text-main_red ">R</span>STM 
+          <span className='wave'>👋</span>
+        </span>
       </button>
 
-      <nav className="text-[8px] sm:text-xs flex flex-wrap items-center gap-3 sm:gap-5 cursor-cell whitespace-nowrap">
-      {ITEMS.map((item, index) => (
-        <button className={buttonStyle} key={index}>
-          {item}
-        </button>
-      ))}
+      <nav className="text-[8px] sm:text-xs flex flex-wrap items-center justify-end gap-3 sm:gap-5 cursor-cell whitespace-nowrap">
+        {ITEMS.map((item, index) => (
+          <button className={buttonStyle} key={index}>
+            {item}
+          </button>
+        ))}
       </nav>
     </header>
   );
