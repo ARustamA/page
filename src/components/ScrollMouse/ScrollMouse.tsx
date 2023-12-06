@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import { ReactComponent as Scroll } from './../../assets/icons/scroll.svg';
+import { useEffect, useState } from 'react';
 
 export const ScrollMouse = () => {
   const [showScroll, setShowScroll] = useState(false);
@@ -23,7 +23,7 @@ export const ScrollMouse = () => {
 
     const interval = setInterval(() => {
       showAndHide();
-    }, 60000); 
+    }, 30000);
 
     return () => {
       clearTimeout(initialTimer);
@@ -32,6 +32,8 @@ export const ScrollMouse = () => {
   }, []);
 
   return showScroll ? (
-    <Scroll className="absolute bottom-3 right-5 animate-bounce w-10 h-16" />
+    <a href="#about">
+      <Scroll className="absolute bottom-10 right-0 animate-bounce w-10 h-16" />
+    </a>
   ) : null;
 };

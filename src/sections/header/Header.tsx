@@ -4,15 +4,15 @@ const ITEMS = ['ОБО МНЕ', 'НАВЫКИ', 'ОПЫТ', 'РЕЗЮМЕ', 'П�
 const buttonStyle = ` hover:text-main_red hover:scale-125 whitespace-nowrap transition-all`;
 
 export const Header = () => {
-  const [navColor, updateNavbar] = useState(false);
+  const [navColor, setUpdateNavbar] = useState(false);
   const targetRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function scrollHandler() {
       if (window.scrollY >= 30) {
-        updateNavbar(true);
+        setUpdateNavbar(true);
       } else {
-        updateNavbar(false);
+        setUpdateNavbar(false);
       }
     }
     window.addEventListener('scroll', scrollHandler);

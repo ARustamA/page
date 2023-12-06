@@ -1,10 +1,4 @@
 
-section {
-  padding-top: 65vh;
-  padding-bottom: 100vh;
-  position: relative;
-}
-
 .parallax {
   overflow: hidden;
   letter-spacing: -2px;

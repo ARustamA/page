@@ -207,8 +207,6 @@
   z-index: 20;
 }
 
-
-
 .wave {
   animation-name: wave-animation;
   animation-duration: 1s;
@@ -242,4 +240,8 @@
   100% {
     transform: rotate(0deg);
   }
+}
+.iconMove:hover .transition-transform {
+  transform: translateX(10px);
+  transition: transform 0.3s ease;
 }
