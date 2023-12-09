@@ -1,20 +1,14 @@
 import { ParallaxText } from './components/ParallaxText/ParallaxText';
-import { ReactComponent as Sendme } from './assets/icons/sendme.svg';
-import { ScrollMouse } from './components/ScrollMouse/ScrollMouse';
-import { ReactComponent as Save } from './assets/icons/save.svg';
 import { WelcomeSection } from './sections/WelcomSection';
 import { AnimatePresence, motion } from 'framer-motion';
-import { SharedModal } from './components/SharedModal';
-import { MainTitle } from './sections/main/MainTitle';
+import { StarField } from './components/StarField';
 import { Header } from './sections/header/Header';
 import { Github } from './components/Github';
+import { Main } from './sections/main/Main';
 import { useEffect, useState } from 'react';
-import laptopImg from './assets/about.png';
-import CV from './assets/resume.pdf';
 
 function App(): JSX.Element {
   const [isLoading, setIsLoading] = useState(true);
-  const [sharedModal, setSharedModal] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -26,6 +20,7 @@ function App(): JSX.Element {
   // https://github.com/smakosh/next-portfolio-dev
   return (
     <AnimatePresence mode="wait">
+      <StarField />
       {isLoading ? (
         <WelcomeSection key="welcome-section" />
       ) : (
@@ -37,60 +32,55 @@ function App(): JSX.Element {
             animate={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
             exit={{ opacity: 0, scale: 0.5, transition: { duration: 0.5 } }}>
             <Header />
-            <motion.section id='main' className={`max-w-7xl mx-auto min-h-screen h-screen pt-7 px-3 relative`}>
-              <MainTitle />
-              <div className="flex flex-col sm:flex-row pt-3 lg:pt-14 ">
-                <div className=" flex gap-3 h-min mx-auto">
-                  <div className="p-4 w-full flex gap-3 items-center max-w-sm lg:max-w-lg">
-                    <p className="text-xs sm:text-base first-line:uppercase first-line:tracking-widest  first-letter:text-5xl ">
-                      фронтенд - разработчик, специализирующийся на создании веб-приложений с
-                      использованием передовых практик и лучших стандартов в индустрии.
-                    </p>
-                    <div className="flex flex-col gap-5 justify-between">
-                      <a
-                        href={CV}
-                        download=""
-                        className="p-4 h-min text-xs bg-main_red/70 hover:bg-main_red hover:rounded-se-3xl 
-                      hover:rounded-es-3xl hover:scale-110 transition-transform delay-100 whitespace-nowrap
-                      flex gap-1 items-center">
-                        Скачать резюме
-                        <Save className={`w-5 h-5`} />
-                      </a>{' '}
-                      <button
-                        onClick={() => setSharedModal(true)}
-                        className="text-main-blue/80 flex gap-1 items-center justify-center duration-300 hover:text-blue-500 
-                        iconMove">
-                        <span className="">Написать</span>
-                        <Sendme className="transition-transform duration-300 " />
-                      </button>
-                      <SharedModal setSharedModal={setSharedModal} sharedModal={sharedModal} />
-                    </div>
-                  </div>
-
-                </div>
-                <div className="max-w-sm lg:max-w-lg ">
-                  <img src={laptopImg} alt="about" className="img-fluid" />
-                </div>
-                  <ScrollMouse />
-              </div>
-            </motion.section>
+            <Main />
           </motion.div>
-          <ParallaxText baseVelocity={-5}>Framer Motion</ParallaxText>
+          <ParallaxText baseVelocity={-2}>
+            JavaScript HTML CSS ECMAScript TypeScript React.js Webpack
+          </ParallaxText>
 
-          <motion.section id='about' className='min-h-screen h-screen '>
+          <motion.section id="about" className="p-4 sm:px-4 pt-16 text-sm">
+            <div className='container mx-auto max-w-7xl py-10'>
+              <p>
+                Владею и в работе активно использую React, React router dom, Redux toolkit + rtk
+                query, Typescript, SCSS, Tailwind, Formik, yup, React-hook-form, а для анимаций
+                Framer motion. В каждом проекте стараюсь пользоваться ESlint и Prettier, так как они
+                помогают писать более чистый, читаемый и согласованный в команде разработчиков код.
+              </p>
+              <br />
 
+              <p>
+                Есть минимально необходимые знания для работы с MongoDB в связке Express и NodeJS,
+                next и nest, а также немного работал с Firebase. В последнее время использую Vite,
+                но также умею и в Webpack. Настраивал Docker контейнеры для своих нужд, а также
+                деплоил минипроекты в бесплатные хостинги. Недавно начал заниматься IT-
+                волонтерством. В планах более глубже изучить Next js, React native и nest js. 🧑‍💻
+              </p>
+              <br />
+              <p>
+                При написании бакалаврской работы я имел опыт работы с базами данных MySql. Также я
+                имею начальные знания по языкам программирования, таким как Python, C++ и Delphi.
+              </p>
+            </div>
           </motion.section>
-
-          <motion.div key="github-section" className={` w-screen min-h-screen h-screen `}>
-            <Github />
-            <p>greeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
-          </motion.div>
-          <div className={`pt-96`}>
-            <ParallaxText baseVelocity={5}>Scroll velocity</ParallaxText>
-          </div>
-          <div className="max-w-7xl mx-auto h-screen">
-            <p>gre</p>
-          </div>
+          <motion.section id="skills" className="p-4 sm:px-4 pt-16">
+            skills
+          </motion.section>
+          <motion.section id="experience" className="p-4 sm:px-4 pt-16">
+            experience
+            <motion.div key="github-section" className={` w-full `}>
+              <Github />
+            </motion.div>
+          </motion.section>
+          <ParallaxText baseVelocity={2}>
+            JavaScript HTML CSS ECMAScript TypeScript React.js Webpack
+          </ParallaxText>
+          <motion.section id="resume" className="p-4 sm:px-4 pt-16">
+            resume
+          </motion.section>
+          <motion.section id="portfolio" className="p-4 sm:px-4 pt-16">
+            portfolio
+          </motion.section>
+          <motion.footer id="contacts"></motion.footer>
         </>
       )}
     </AnimatePresence>

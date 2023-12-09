@@ -14,13 +14,13 @@
 }
 
 .typing_demo {
-  width: 18ch;
-  animation: typing 2s steps(17), blink 0.5s step-end infinite alternate;
+  width: 20ch;
+  animation: typing 2s steps(20), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
   font-family: monospace;
-  font-size: 2em;
+  font-size: 1.8em;
   padding-top: 30px;
 }
 
@@ -36,8 +36,6 @@
   }
 }
 
-
-
 .mask {
   top: 0;
   left: 0;
@@ -49,5 +47,5 @@
   position: absolute;
   color: black;
   cursor: cell;
-  border-radius:  15rem;
+  border-radius:  12rem;
 }

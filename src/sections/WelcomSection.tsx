@@ -1,4 +1,4 @@
-import { BackgroundCanvas } from "../background/Background";
+import { BackgroundCanvas } from "../components/background/Background";
 
 const WelcomeSection = () => {
   return (

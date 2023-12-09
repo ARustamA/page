@@ -16,8 +16,8 @@ function MainTitle() {
     <motion.div
       className={styles.mask}
       animate={{
-        WebkitMaskPosition: `${x !== null ? x - size / 1.1 : 0}px ${
-          y !== null ? y - size / 1.3 : 0
+        WebkitMaskPosition: `${x !== null ? x - size / 1.9 : 0}px ${
+          y !== null ? y - size / 1.5 : 0
         }px`,
         WebkitMaskSize: `${size}px`
       }}
@@ -41,9 +41,8 @@ function MainTitle() {
     </motion.div>
 
     <div
-      className={`w-full flex flex-col items-center justify-center text-slate-400 
-     lg:text-5xl  `}>
-      <div className={styles.typing_demo}>Ахметьянов Рустам</div>
+      className={`w-full flex flex-col items-center justify-center text-slate-400 lg:text-5xl  `}>
+      <div className={styles.typing_demo}>Frontend-разработчик</div>
 
       {/* <span className="flex items-center gap-5 ">
         <span className='h-1 bg-red-400 w-20 sm:w-32 lg:w-72'></span>
@@ -55,7 +54,7 @@ function MainTitle() {
       </span> */}
     </div>
   </motion.div>
-   );
+  );
 }
 
 export  { MainTitle };
