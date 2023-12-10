@@ -7,7 +7,6 @@ const StarField = () => {
   const [numStars, setNumStars] = useState(50);
 
   useEffect(() => {
-    const container = starFieldRef.current;
 
     const handleResize = () => {
       if (width && width < 778) {
@@ -17,7 +16,7 @@ const StarField = () => {
       }
     };
 
-    handleResize(); // Начальная настройка
+    handleResize();
 
     window.addEventListener('resize', handleResize);
 
