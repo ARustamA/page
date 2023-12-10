@@ -25,12 +25,12 @@ export const Main = () => {
           className="p-4 w-full flex flex-col sm:flex-row gap-3 items-center 
         max-w-sm lg:max-w-lg ">
           <div>
-            <p className="first-letter:text-5xl text-xs sm:text-base">
-              Всем привет😉, меня зовут <span className='text-main_red'>Рустам</span>, я -
-              <p className="first-line:tracking-widest"> фронтенд - разработчик,</p>{' '}
+            <span className="first-letter:text-5xl text-xs sm:text-base">
+              Всем привет😉 <br />Меня зовут <span className='text-main_red'>Рустам</span>, я -
+              <h6 className="first-line:tracking-widest"> фронтенд - разработчик,</h6>{' '}
               специализирующийся на создании веб-приложений с использованием передовых практик и
-              лучших стандартов в индустрии.
-            </p>
+              лучших стандартов в индустрии.🧑‍💻
+            </span>
           </div>
           <div className="flex flex-col gap-5 justify-between">
             <a

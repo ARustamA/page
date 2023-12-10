@@ -40,7 +40,7 @@ const StarField = () => {
     }
   }, [numStars]);
 
-  return <div ref={starFieldRef} className="star-field"></div>;
+  return <div ref={starFieldRef} key='star-field' className="star-field"></div>;
 };
 
 export { StarField };

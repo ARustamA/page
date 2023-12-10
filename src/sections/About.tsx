@@ -3,7 +3,7 @@ import {  motion } from 'framer-motion';
 
 export const About = () => {
   return (
-    <motion.section id="about" className="p-4 sm:px-4 pt-16 text-sm">
+    <motion.section id="about"  key="about" className="p-4 pt-7 sm:px-4 sm:pt-16 text-sm">
       <div className="container mx-auto max-w-7xl py-10">
         <p>
           Владею и в работе активно использую React, React router dom, Redux toolkit + rtk query,

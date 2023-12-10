@@ -21,14 +21,14 @@ function App(): JSX.Element {
   // https://github.com/soumyajit4419/Portfolio
   // https://github.com/smakosh/next-portfolio-dev
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait" >
       <StarField />
       {isLoading ? (
         <WelcomeSection key="welcome-section" />
       ) : (
         <>
           <motion.div
-            key="site-section"
+            key="main"
             className={` w-screen  transition-all  ease-in-out`}
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
@@ -42,22 +42,22 @@ function App(): JSX.Element {
 
           <About />
           <Skills />
-          <motion.section id="experience" className="p-4 sm:px-4 pt-16">
+          <motion.section id="experience" key='experience' className="p-4 sm:px-4 pt-16">
             experience
-            <motion.div key="github-section" className={` w-full `}>
+            <motion.div className={` w-full `}>
               <Github />
             </motion.div>
           </motion.section>
           <ParallaxText baseVelocity={2}>
             JavaScript HTML CSS ECMAScript TypeScript React.js Webpack
           </ParallaxText>
-          <motion.section id="resume" className="p-4 sm:px-4 pt-16">
+          <motion.section id="resume" key='resume' className="p-4 sm:px-4 pt-16">
             resume
           </motion.section>
-          <motion.section id="portfolio" className="p-4 sm:px-4 pt-16">
+          <motion.section id="portfolio" key='portfolio' className="p-4 sm:px-4 pt-16">
             portfolio
           </motion.section>
-          <motion.footer id="contacts"></motion.footer>
+          <motion.footer id="contacts" key='contacts'></motion.footer>
         </>
       )}
     </AnimatePresence>

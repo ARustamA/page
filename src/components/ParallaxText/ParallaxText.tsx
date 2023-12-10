@@ -46,7 +46,7 @@ export function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   });
 
   return (
-    <div className={styles.parallax}>
+    <div className={styles.parallax} key='ParallaxText'>
       <motion.div className={styles.scroller} style={{ x }}>
         <span>{children} </span>
         <span> {children} </span>

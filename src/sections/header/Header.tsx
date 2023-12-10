@@ -34,7 +34,7 @@ export const Header = () => {
   return (
     <motion.header
       className={`flex items-center justify-between px-4 sm:px-16 py-4 gap-5 w-full
-        ${!navColor ? 'stickyHeader ' : 'navbarHeader transition-all backdrop-filter backdrop-blur-3xl '}
+        ${!navColor ? 'stickyHeader ' : 'navbarHeader transition-all backdrop-filter backdrop-blur-[100px] '}
      `}>
       <a href={`#main`} className=" cursor-cell text-xs sm:text-lg">
         <span className="whitespace-nowrap">
