@@ -13,13 +13,15 @@ const BackgroundCanvas = () => {
       fps: 20,
       color: '#017600',
       charset: '0123456789ABCDEF∫∑∆π♦♠♣♥☼ᚠᛒᛋ☽ひろに木人风',
-      size: 12,
+      size: 12
     };
 
     const canvas = document.getElementById('canvas') as HTMLCanvasElement;
     const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
 
-    let w: number, h: number, p: number[] = [];
+    let w: number,
+      h: number,
+      p: number[] = [];
     const resize = () => {
       w = canvas.width = window.innerWidth;
       h = canvas.height = window.innerHeight;
@@ -47,7 +49,7 @@ const BackgroundCanvas = () => {
     let interval: NodeJS.Timer | number | undefined = setInterval(draw, 1000 / state.fps);
   }, []);
 
-  return <canvas id="canvas"></canvas>;
+  return <canvas id="canvas" className="text-green-bg"></canvas>;
 };
 
-export  { BackgroundCanvas };
+export { BackgroundCanvas };

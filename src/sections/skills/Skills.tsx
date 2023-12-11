@@ -35,7 +35,7 @@ export const Skills = () => {
           </Fragment>
         ))}
       </div>
-      <div className={`${boxStyle} flex-wrap`}>
+      <div className={`${boxStyle} max-w-sm lg:max-w-full flex-wrap mx-auto`}>
         {tools.map((item) => (
           <Fragment key={item.id}>
             {renderCard({ id: item.id, title: item.title, icon: item.icon })}

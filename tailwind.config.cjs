@@ -21,7 +21,7 @@ module.exports = {
         'black999': '#121212',
 
         'blue-light': '#0BA3D1',
-
+        'green-bg': '#017600',
         'main-blue': '#CEFDFF',
         'second-blue': '#E6F2F7',
         'main_red': '#d14020',

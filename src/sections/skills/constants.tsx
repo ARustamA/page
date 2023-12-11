@@ -48,8 +48,8 @@ export const tools: TCard[] = [
   { id: '1', title: 'Vite', icon: Vite },
   { id: '2', title: 'Webpack', icon: Webpack },
   { id: '3', title: 'Docker', icon: Docker },
-  { id: '4', title: 'Postman', icon: Postman },
-  { id: '5', title: 'Swagger', icon: Swagger },
+  { id: '4', title: 'Swagger', icon: Swagger },
+  { id: '5', title: 'Postman', icon: Postman },
   { id: '6', title: 'PostgreSQL', icon: PostgreSQL },
   { id: '7', title: 'MongoDB', icon: MongoDB },
   { id: '8', title: 'Firebase', icon: Firebase }
