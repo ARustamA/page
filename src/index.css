@@ -117,7 +117,7 @@ select {
 
 section {
   min-height: 100vh;
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
 
   margin-left: auto;
@@ -274,7 +274,8 @@ section {
   transition: all 0.3s ease-out 0s !important;
   /* box-shadow: 0px 10px 20px 0px rgba(231, 224, 219, 0.171) !important; */
   font-size: 1.2rem !important;
-  opacity: 75%;
+  opacity: 80%;
+  background: #0a0025;
   z-index: 20;
 }
 

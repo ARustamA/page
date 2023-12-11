@@ -3,11 +3,11 @@ import { WelcomeSection } from './sections/WelcomSection';
 import { AnimatePresence, motion } from 'framer-motion';
 import { StarField } from './components/StarField';
 import { Header } from './sections/header/Header';
-import { About } from './sections/About';
-import { Github } from './components/Github';
+import { Skills } from './sections/skills/Skills';
 import { Main } from './sections/main/Main';
 import { useEffect, useState } from 'react';
-import { Skills } from './sections/skills/Skills';
+import { About } from './sections/About';
+import { Experience } from './sections/experience/experience';
 
 function App(): JSX.Element {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,7 +21,7 @@ function App(): JSX.Element {
   // https://github.com/soumyajit4419/Portfolio
   // https://github.com/smakosh/next-portfolio-dev
   return (
-    <AnimatePresence mode="wait" >
+    <AnimatePresence mode="wait">
       <StarField />
       {isLoading ? (
         <WelcomeSection key="welcome-section" />
@@ -36,28 +36,28 @@ function App(): JSX.Element {
             <Header />
             <Main />
           </motion.div>
+
+          <About />
+
           <ParallaxText baseVelocity={-2}>
             JavaScript HTML CSS ECMAScript TypeScript React.js Webpack
           </ParallaxText>
 
-          <About />
           <Skills />
-          <motion.section id="experience" key='experience' className="p-4 sm:px-4 pt-16">
-            experience
-            <motion.div className={` w-full `}>
-              <Github />
-            </motion.div>
+
+          <Experience />
+          <motion.section id="portfolio" key="portfolio" className="p-4 sm:px-4 pt-16">
+            portfolio
           </motion.section>
+          
           <ParallaxText baseVelocity={2}>
             JavaScript HTML CSS ECMAScript TypeScript React.js Webpack
           </ParallaxText>
-          <motion.section id="resume" key='resume' className="p-4 sm:px-4 pt-16">
+          <motion.section id="resume" key="resume" className="p-4 sm:px-4 pt-16">
             resume
           </motion.section>
-          <motion.section id="portfolio" key='portfolio' className="p-4 sm:px-4 pt-16">
-            portfolio
-          </motion.section>
-          <motion.footer id="contacts" key='contacts'></motion.footer>
+
+          <motion.footer id="contacts" key="contacts"></motion.footer>
         </>
       )}
     </AnimatePresence>

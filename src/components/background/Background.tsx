@@ -12,7 +12,7 @@ const BackgroundCanvas = () => {
     const state: State = {
       fps: 20,
       color: '#017600',
-      charset: '0123456789ABCDEF∫∑∆π♦♠♣♥☼ᚠᛒᛋ☽ひろに木人风',
+      charset: '0123456789ABCDEF∫∑∆π☼ᚠᛒᛋ☽ひろに木人风',
       size: 12
     };
 

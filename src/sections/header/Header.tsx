@@ -6,8 +6,8 @@ const ITEMS = [
   { id: 'about', title: 'ОБО МНЕ' },
   { id: 'skills', title: 'НАВЫКИ' },
   { id: 'experience', title: 'ОПЫТ' },
-  { id: 'resume', title: 'РЕЗЮМЕ' },
   { id: 'portfolio', title: 'ПОРТФОЛИО' },
+  { id: 'resume', title: 'РЕЗЮМЕ' },
   { id: 'contacts', title: 'КОНТАКТЫ' }
 ];
 const buttonStyle = ` hover:text-main_red hover:scale-125 whitespace-nowrap transition-all`;
