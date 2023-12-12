@@ -24,8 +24,8 @@ export const Main = () => {
         <div
           className="p-4 w-full flex flex-col sm:flex-row gap-3 items-center 
         max-w-sm lg:max-w-lg ">
-          <div>
-            <p className="first-letter:text-5xl first-line: text-xs sm:text-base indent-3">
+          <div className='leading-8'>
+            <p className="first-letter:text-5xl first-line: text-xs sm:text-base indent-3 ">
               Всем привет😉</p>Меня зовут <span className='text-main_red'>Рустам</span>, я -
               <h6 className="first-line:tracking-widest"> фронтенд - разработчик,</h6>{' '}
               специализирующийся на создании веб-приложений с использованием передовых практик и

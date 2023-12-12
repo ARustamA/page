@@ -9,11 +9,12 @@ export type TCard = {
   icon: ComponentType<SVGProps<SVGSVGElement>>;
 };
 const boxStyle = `flex gap-x-3 sm:gap-5 w-full items-center justify-center relative`;
-const titleStyle = `absolute -top-2 sm:left-16 opacity-50 text-sm`;
+const titleStyle = `absolute -top-4 sm:left-16 opacity-50 text-sm`;
+
 export const Skills = () => {
   return (
     <motion.section id="skills" key="skills" className="p-4 sm:px-4 pt-16 grid sm:gap-3 ">
-      <h2 className="text-center sm:text-xl pb-3 ">Технические навыки</h2>
+      <h2 className="sm:text-xl pb-3 ">Технические навыки</h2>
 
       <div className={`${boxStyle}`}>
         <span className={`${titleStyle}`}>Языки</span>

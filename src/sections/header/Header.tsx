@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 const ITEMS = [
-  { id: 'about', title: 'ОБО МНЕ' },
+  // { id: 'about', title: 'ОБО МНЕ' },
   { id: 'skills', title: 'НАВЫКИ' },
   { id: 'experience', title: 'ОПЫТ' },
   { id: 'portfolio', title: 'ПОРТФОЛИО' },

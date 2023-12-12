@@ -1,4 +1,5 @@
 import { ParallaxText } from './components/ParallaxText/ParallaxText';
+import { Experience } from './sections/experience/Experience';
 import { WelcomeSection } from './sections/WelcomSection';
 import { AnimatePresence, motion } from 'framer-motion';
 import { StarField } from './components/StarField';
@@ -6,8 +7,7 @@ import { Header } from './sections/header/Header';
 import { Skills } from './sections/skills/Skills';
 import { Main } from './sections/main/Main';
 import { useEffect, useState } from 'react';
-import { About } from './sections/About';
-import { Experience } from './sections/experience/Experience';
+import { Resume } from './sections/resume/Resume';
 
 function App(): JSX.Element {
   const [isLoading, setIsLoading] = useState(true);
@@ -37,7 +37,7 @@ function App(): JSX.Element {
             <Main />
           </motion.div>
 
-          <About />
+          {/* <About /> */}
 
           <ParallaxText baseVelocity={-2}>
             JavaScript HTML CSS ECMAScript TypeScript React.js Webpack
@@ -47,15 +47,13 @@ function App(): JSX.Element {
 
           <Experience />
           <motion.section id="portfolio" key="portfolio" className="p-4 sm:px-4 pt-16">
-            portfolio
+            <h2 className="sm:text-xl  ">Портфолио</h2>
           </motion.section>
-          
+
           <ParallaxText baseVelocity={2}>
             JavaScript HTML CSS ECMAScript TypeScript React.js Webpack
           </ParallaxText>
-          <motion.section id="resume" key="resume" className="p-4 sm:px-4 pt-16">
-            resume
-          </motion.section>
+          {/* <Resume /> */}
 
           <motion.footer id="contacts" key="contacts"></motion.footer>
         </>
