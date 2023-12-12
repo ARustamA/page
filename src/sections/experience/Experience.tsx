@@ -12,11 +12,11 @@ export const Experience = () => {
           <p>Самообучение</p>
           <div className="flex flex-col ">
             <p>
-              <strong>Современный учебник JavaScript. learn.javascript.ru </strong>{` `}
+              <strong className="italic">Современный учебник JavaScript. learn.javascript.ru </strong>{` `}
               2022 - 2023
             </p>
             <p>
-              <strong>Курс "React JS - путь самурая 1.0"</strong>
+              <strong className="italic">Курс "React JS - путь самурая 1.0"</strong>
               2022
             </p>
             <p>
@@ -24,7 +24,7 @@ export const Experience = () => {
             </p>
             <p>
               <strong className="italic">
-                Уроки, практика, Ulbi TV (React, Redux, MobX)Продвинутый React {` `}
+                Уроки, практика, Ulbi TV (React, Redux, MobX) Продвинутый React {` `}
               </strong>
               2022
             </p>

@@ -7,7 +7,7 @@ import { Skills } from './sections/skills/Skills';
 import { Main } from './sections/main/Main';
 import { useEffect, useState } from 'react';
 import { About } from './sections/About';
-import { Experience } from './sections/experience/experience';
+import { Experience } from './sections/experience/Experience';
 
 function App(): JSX.Element {
   const [isLoading, setIsLoading] = useState(true);
