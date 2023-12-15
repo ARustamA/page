@@ -1,4 +1,4 @@
-import { useWindowSize } from '../hooks/useWindowSize';
+import { useWindowSize } from '../utils/hooks/useWindowSize';
 import { useEffect, useRef, useState } from 'react';
 
 const StarField = () => {
@@ -7,7 +7,6 @@ const StarField = () => {
   const [numStars, setNumStars] = useState(50);
 
   useEffect(() => {
-
     const handleResize = () => {
       if (width && width < 778) {
         setNumStars(33);
@@ -28,7 +27,7 @@ const StarField = () => {
   useEffect(() => {
     const container = starFieldRef.current;
     if (container) {
-      container.innerHTML = ''; 
+      container.innerHTML = '';
 
       for (let i = 0; i < numStars; i++) {
         const star = document.createElement('div');
@@ -40,7 +39,7 @@ const StarField = () => {
     }
   }, [numStars]);
 
-  return <div ref={starFieldRef} key='star-field' className="star-field"></div>;
+  return <div ref={starFieldRef} key="star-field" className="star-field"></div>;
 };
 
 export { StarField };

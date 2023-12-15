@@ -7,7 +7,8 @@ import { Header } from './sections/header/Header';
 import { Skills } from './sections/skills/Skills';
 import { Main } from './sections/main/Main';
 import { useEffect, useState } from 'react';
-import { Resume } from './sections/resume/Resume';
+import { About } from './sections/About';
+import { Projects } from './sections/projects/Projects';
 
 function App(): JSX.Element {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,9 +18,13 @@ function App(): JSX.Element {
       setIsLoading(false);
     }, 5000);
   }, []);
+  // const [width, setWidth] = useState(1200);
 
+  // useEffect(() => {
+  //   setWidth(window.innerWidth);
+  // }, []);
   // https://github.com/soumyajit4419/Portfolio
-  // https://github.com/smakosh/next-portfolio-dev
+
   return (
     <AnimatePresence mode="wait">
       <StarField />
@@ -39,21 +44,13 @@ function App(): JSX.Element {
 
           {/* <About /> */}
 
+          <Skills />
           <ParallaxText baseVelocity={-2}>
             JavaScript HTML CSS ECMAScript TypeScript React.js Webpack
           </ParallaxText>
-
-          <Skills />
-
           <Experience />
-          <motion.section id="portfolio" key="portfolio" className="p-4 sm:px-4 pt-16">
-            <h2 className="sm:text-xl  ">Портфолио</h2>
-          </motion.section>
 
-          <ParallaxText baseVelocity={2}>
-            JavaScript HTML CSS ECMAScript TypeScript React.js Webpack
-          </ParallaxText>
-          {/* <Resume /> */}
+          <Projects />
 
           <motion.footer id="contacts" key="contacts"></motion.footer>
         </>

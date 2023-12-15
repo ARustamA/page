@@ -1,68 +1,35 @@
 import { Github } from '../../components/Github';
-import { motion } from 'framer-motion';
+import { motion, useAnimation, useInView } from 'framer-motion';
+import { WorkTimeLine } from './WorkTimeLine';
 
 export const Experience = () => {
+  const controls = useAnimation();
+  const handleInViewGit = (inView: boolean) => {
+    if (inView) {
+      controls.start({
+        y: '0',
+        width: '100%'
+      });
+    } else {
+      controls.start({
+        y: '-1500',
+        width: 0
+      });
+    }
+  };
+
+
+
   return (
     <motion.section id="experience" key="experience" className="p-4 sm:px-4 pt-16">
       <h2 className="sm:text-xl  ">Опыт</h2>
-
       <div className="flex flex-col sm:flex-row justify-between gap-3 max-w-5xl pb-3 mx-auto">
-        <div className="flex flex-col flex-1 gap-3">
-          <div className="flex flex-col sm:flex-row justify-between gap-1">
-            <div className="grid">
-              <p className="text-main-blue indent-3 ">Волонтерство, проект "Касание"</p>
-              <strong>Frontend-разработчик</strong>
-              <p className="text-xs">Декабря 2023 — по Н.В.</p>
-            </div>
-            <div className="grid grid-cols-2 gap-x-2">
-              <span>JavaScript</span>
-              <span>React</span>
-              <span>Firebase</span>
-              <span>VK-UI</span>
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row justify-between gap-1">
-            <div className="grid">
-              <p className="text-main-blue indent-3 ">HIT Kazakstan</p>
-              <strong>Frontend-разработчик</strong>
-              <p className="text-xs">Февраль 2023 — по Н.В.</p>
-            </div>
-            <div className="grid grid-cols-2 gap-x-2">
-              <span>TypeScript</span>
-              <span>React</span>
-              <span>Redux Toolkit</span>
-              <span>REST API</span>
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row justify-between gap-1">
-            <div className="grid">
-              <p className="text-main-blue indent-3 ">21tech</p>
-              <strong>Intern fronted разработчик</strong>
-              <p className="text-xs">Ноябрь 2022 — Февраль 2023</p>
-            </div>
-            <div className="grid grid-cols-2 gap-x-2">
-              <span>TypeScript</span>
-              <span>React</span>
-              <span>REST API</span>
-              <span>WebSocket</span>
-            </div>
-          </div>
-        </div>
-        <div className="flex items-center justify-center">
-          <a href="https://github.com/ARustamA">
-            <img
-              loading="lazy"
-              src="https://github-readme-stats.vercel.app/api/top-langs?username=ARustamA&show_icons=true&locale=ru&layout=donut&theme=midnight-purple"
-              alt="ARustamA"
-            />
-          </a>
-        </div>
+        <WorkTimeLine />
       </div>
-
       <div className="flex flex-col sm:flex-row gap-5 max-w-5xl mx-auto pb-3">
-        <div className=" max-w-sm lg:max-w-lg">
+        <motion.div className=" max-w-sm lg:max-w-lg">
           <p className="text-main-blue">Самообучение</p>
-          <div className="flex flex-col gap-1 text-sm">
+          <motion.div className="flex flex-col gap-3 text-sm">
             <p>
               <strong>Современный учебник JavaScript. learn.javascript.ru </strong>
               {` `}
@@ -88,9 +55,9 @@ export const Experience = () => {
               </strong>
               2022
             </p>
-          </div>
-        </div>
-        <div className="grid gap-2 max-w-sm lg:max-w-lg">
+          </motion.div>
+        </motion.div>
+        <motion.div className="grid gap-2 max-w-sm lg:max-w-lg">
           <p className="text-main-blue">Образование</p>
           <div className="flex flex-col gap-1">
             <span className="text-main_red text-sm">
@@ -110,11 +77,23 @@ export const Experience = () => {
             </span>
             <p className=" text-xs">Физико-математический факультет, Информатика</p>
           </div>
-        </div>
+        </motion.div>
       </div>
-      <motion.div className={` w-full `}>
+      <motion.div
+        // className="w-full"
+        initial={{
+          y: '-1500',
+          width: 0
+        }}
+        animate={controls}
+        exit={{
+          y: '-1500',
+          transition: { duration: 1 }
+        }}
+        onViewportEnter={() => handleInViewGit(true)}
+        onViewportLeave={() => handleInViewGit(false)}>
         <Github />
-      </motion.div>
+      </motion.div>{' '}
     </motion.section>
   );
 };

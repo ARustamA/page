@@ -1,6 +1,6 @@
 import { ReactComponent as Scroll } from './../assets/icons/scroll.svg';
 import { useEffect, useState } from 'react';
-import { scrollToTarget } from './utils/scrollToTarget';
+import { scrollToTarget } from '../utils/scrollToTarget';
 
 export const ScrollMouse = () => {
   const [showScroll, setShowScroll] = useState(false);
@@ -33,7 +33,7 @@ export const ScrollMouse = () => {
   }, []);
 
   return showScroll ? (
-    <button onClick={()=>scrollToTarget('')}>
+    <button onClick={() => scrollToTarget('')}>
       <Scroll className="absolute bottom-10 right-10 animate-bounce sm:w-10 sm:h-16" />
     </button>
   ) : null;

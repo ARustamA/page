@@ -1,4 +1,4 @@
-import { frontendTech, languages, styles, tools } from './constants';
+import { frontendTech, languages, styles, tools, tools1 } from '../../assets/constants/constants';
 import { Fragment, type ComponentType, type SVGProps } from 'react';
 import { motion } from 'framer-motion';
 import { renderCard } from './Card';
@@ -13,7 +13,10 @@ const titleStyle = `absolute -top-4 sm:left-16 opacity-50 text-sm`;
 
 export const Skills = () => {
   return (
-    <motion.section id="skills" key="skills" className="p-4 sm:px-4 pt-16 grid sm:gap-3 ">
+    <motion.section
+      id="skills"
+      key="skills"
+      className="p-4 sm:px-4 pt-16 grid sm:gap-3 cursor-none">
       <h2 className="sm:text-xl pb-3 ">Технические навыки</h2>
 
       <div className={`${boxStyle}`}>
@@ -35,7 +38,7 @@ export const Skills = () => {
       </div>
 
       <div className={`${boxStyle}`}>
-      <span className={`${titleStyle}`}>Стилизация</span>
+        <span className={`${titleStyle}`}>Стилизация</span>
         {styles.map((item) => (
           <Fragment key={item.id}>
             {renderCard({ id: item.id, title: item.title, icon: item.icon })}
@@ -43,9 +46,16 @@ export const Skills = () => {
         ))}
       </div>
 
-      <div className={`${boxStyle} max-w-sm lg:max-w-full flex-wrap mx-auto`}>
-      <span className={`${titleStyle}`}>Инструменты</span>
+      <div className={`${boxStyle}`}>
+        <span className={`${titleStyle}`}>Инструменты</span>
         {tools.map((item) => (
+          <Fragment key={item.id}>
+            {renderCard({ id: item.id, title: item.title, icon: item.icon })}
+          </Fragment>
+        ))}
+      </div>
+      <div className={`${boxStyle}`}>
+        {tools1.map((item) => (
           <Fragment key={item.id}>
             {renderCard({ id: item.id, title: item.title, icon: item.icon })}
           </Fragment>

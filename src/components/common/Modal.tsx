@@ -5,7 +5,7 @@ import type { Dispatch, FC, HTMLAttributes, ReactNode, SetStateAction } from 're
 
 import ReactPortal from './ReactPortal';
 
-import { usePrevious } from '../../hooks/usePrevious';
+import { usePrevious } from '../../utils/hooks/usePrevious';
 
 type Props = {
   children: ReactNode;

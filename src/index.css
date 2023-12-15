@@ -30,11 +30,10 @@ dd {
   margin: 0;
 }
 
-
-ul[class],
+/* ul[class],
 ol[class] {
   list-style: none;
-}
+} */
 
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -48,7 +47,6 @@ img {
 article > * + * {
   margin-top: 1em;
 }
-
 
 input,
 button,
@@ -82,7 +80,13 @@ select {
   height: 100dvh;
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(to top, rgb(42, 14, 104), rgb(6, 0, 20),rgb(6, 0, 20), rgb(42, 14, 104));
+  background-image: linear-gradient(
+    to top,
+    rgb(42, 14, 104),
+    rgb(6, 0, 20),
+    rgb(6, 0, 20),
+    rgb(42, 14, 104)
+  );
 
   color: rgba(255, 237, 237, 0.87);
   /* background-color: #4ac0c0; */
@@ -151,56 +155,7 @@ section {
     animation: logo-spin infinite 20s linear;
   }
 }
-.arrow {
-  opacity: 0;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform-origin: 50% 50%;
-  transform: translate3d(-50%, -50%, 0);
-}
 
-.arrow-first {
-  animation: arrow-movement 2s ease-in-out infinite;
-}
-.arrow-second {
-  animation: arrow-movement 2s 1s ease-in-out infinite;
-}
-
-.arrow:before,
-.arrow:after {
-  background: #fff;
-  content: '';
-  display: block;
-  height: 3px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30px;
-}
-
-.arrow:before {
-  transform: rotate(45deg) translateX(-23%);
-  transform-origin: top left;
-}
-
-.arrow:after {
-  transform: rotate(-45deg) translateX(23%);
-  transform-origin: top right;
-}
-
-@keyframes arrow-movement {
-  0% {
-    opacity: 0;
-    top: 45%;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 .typingHello {
   width: 14ch;
   animation: typing 2s steps(16), blink 0.4s step-end infinite alternate;
@@ -209,6 +164,7 @@ section {
   border-right: 3px solid;
   font-family: Unbounded;
   padding-top: 30px;
+  color: #ec4e39;
 }
 @keyframes typing {
   from {
@@ -253,27 +209,16 @@ section {
     scale: 50%;
   }
 }
-@keyframes animateBlock {
-  0% {
-    transform: scale(0, 0.005);
-  }
-  50% {
-    transform: scaleY(0.005);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}
 
 .stickyHeader {
   transition: all 0.3s ease-out 0s !important;
-  backdrop-filter: blur(15px) !important;
+  /* backdrop-filter: blur(15px)  !important; */
 }
 .navbarHeader {
-  position: fixed !important;
+  position: fixed;
+  top: 0;
+  left: 0;
   transition: all 0.3s ease-out 0s !important;
-  /* box-shadow: 0px 10px 20px 0px rgba(231, 224, 219, 0.171) !important; */
-  font-size: 1.2rem !important;
   opacity: 80%;
   background: #0a0025;
   z-index: 20;
@@ -332,6 +277,6 @@ section {
   position: absolute;
   width: 2px;
   height: 2px;
-  background-color: #fff; 
+  background-color: #fff;
   border-radius: 50%;
 }
