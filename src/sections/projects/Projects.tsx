@@ -1,5 +1,10 @@
 import { motion } from 'framer-motion';
 
+
+// https://bakery-three.vercel.app/
+// https://gym1-arustama.vercel.app/
+// nom-wat-landing-page.vercel.app
+
 export const Projects = () => {
   return (
     <motion.section id="portfolio" key="portfolio" className="p-4 sm:px-4 pt-16">

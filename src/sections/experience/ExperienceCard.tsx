@@ -17,8 +17,8 @@ export const ExperienceCard = ({ experience }: { experience: IExperience }) => {
       iconStyle={{ background: iconBg }}
       icon={<Icon />}>
       <div className="">
-        <h3 className="text-main-blue text-[24px] font-bold">{title}</h3>
-        <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>
+        <h3 className="text-main-blue text-2xl font-bold">{title}</h3>
+        <p className="text-secondary text-lg font-semibold" >
           {company_name}
         </p>
       </div>

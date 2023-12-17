@@ -18,19 +18,21 @@ export const Main = () => {
       exit={{ opacity: 0, y: 30 }}
       transition={{ duration: 0.5 }}
       id="main"
-      className={` relative container flex items-center`}>
+      className={` relative container grid items-center`}>
       {/* <MainTitle /> */}
+
       <div className="flex flex-col sm:flex-row pt-3 justify-between max-w-7xl mx-auto">
         <div
           className="p-4 w-full flex flex-col sm:flex-row gap-3 items-center 
         max-w-sm lg:max-w-lg ">
-          <div className='leading-8'>
+          <div className="leading-8">
             <p className="first-letter:text-5xl first-line: text-xs sm:text-base indent-3 ">
-              Всем привет😉</p>Меня зовут <span className='text-main_red'>Рустам</span>, я -
-              <h6 className="first-line:tracking-widest"> фронтенд - разработчик,</h6>{' '}
-              специализирующийся на создании веб-приложений с использованием передовых практик и
-              лучших стандартов в индустрии.🧑‍💻
-           
+              Всем привет😉
+            </p>
+            Меня зовут <span className="text-main_red">Рустам</span>, я -
+            <h6 className="first-line:tracking-widest"> фронтенд - разработчик,</h6>{' '}
+            специализирующийся на создании веб-приложений с использованием передовых практик и
+            лучших стандартов в индустрии.🧑‍💻
           </div>
           <div className="flex flex-col gap-5 justify-between">
             <a

@@ -16,7 +16,7 @@ export const Skills = () => {
     <motion.section
       id="skills"
       key="skills"
-      className="p-4 sm:px-4 pt-16 grid sm:gap-3 cursor-none">
+      className="p-4 sm:px-4 pt-16 grid gap-3 cursor-none">
       <h2 className="sm:text-xl pb-3 ">Технические навыки</h2>
 
       <div className={`${boxStyle}`}>
@@ -60,6 +60,15 @@ export const Skills = () => {
             {renderCard({ id: item.id, title: item.title, icon: item.icon })}
           </Fragment>
         ))}
+      </div>
+      <div className={`${boxStyle} flex items-center justify-center h-48 sm:h-auto`}>
+        <a href="https://github.com/ARustamA" className={`absolute top-0 sm:-top-56 sm:left-8 opacity-75`}>
+          <img
+            loading="lazy"
+            src="https://github-readme-stats.vercel.app/api/top-langs?username=ARustamA&show_icons=true&locale=ru&layout=donut&theme=midnight-purple"
+            alt="ARustamA"
+          />
+        </a>
       </div>
     </motion.section>
   );

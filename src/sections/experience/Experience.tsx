@@ -1,24 +1,13 @@
 import { Github } from '../../components/Github';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { WorkTimeLine } from './WorkTimeLine';
+import { useRef } from 'react';
 
 export const Experience = () => {
-  const controls = useAnimation();
-  const handleInViewGit = (inView: boolean) => {
-    if (inView) {
-      controls.start({
-        y: '0',
-        width: '100%'
-      });
-    } else {
-      controls.start({
-        y: '-1500',
-        width: 0
-      });
-    }
-  };
-
-
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const refGit = useRef(null);
+  const isInViewGit = useInView(ref, { once: true });
 
   return (
     <motion.section id="experience" key="experience" className="p-4 sm:px-4 pt-16">
@@ -27,7 +16,10 @@ export const Experience = () => {
         <WorkTimeLine />
       </div>
       <div className="flex flex-col sm:flex-row gap-5 max-w-5xl mx-auto pb-3">
-        <motion.div className=" max-w-sm lg:max-w-lg">
+        <motion.div
+          className={`${isInView ? 'opacity-100' : '-translate-y-48 opacity-0'} 
+        transition-all delay-300 ease-in max-w-sm lg:max-w-lg `}
+          ref={ref}>
           <p className="text-main-blue">Самообучение</p>
           <motion.div className="flex flex-col gap-3 text-sm">
             <p>
@@ -57,7 +49,10 @@ export const Experience = () => {
             </p>
           </motion.div>
         </motion.div>
-        <motion.div className="grid gap-2 max-w-sm lg:max-w-lg">
+        <motion.div
+          className={` ${isInView ? 'opacity-100' : 'translate-y-48 opacity-0'} 
+        transition-all delay-300 ease-in grid gap-2 max-w-sm lg:max-w-lg`}
+          ref={ref}>
           <p className="text-main-blue">Образование</p>
           <div className="flex flex-col gap-1">
             <span className="text-main_red text-sm">
@@ -80,20 +75,12 @@ export const Experience = () => {
         </motion.div>
       </div>
       <motion.div
-        // className="w-full"
-        initial={{
-          y: '-1500',
-          width: 0
-        }}
-        animate={controls}
-        exit={{
-          y: '-1500',
-          transition: { duration: 1 }
-        }}
-        onViewportEnter={() => handleInViewGit(true)}
-        onViewportLeave={() => handleInViewGit(false)}>
+        ref={refGit}
+        className={`${
+          isInViewGit ? 'opacity-100' : ' opacity-0 -translate-y-48 translate-x-48'
+        } transition-all transform-cpu delay-700 ease-in`}>
         <Github />
-      </motion.div>{' '}
+      </motion.div>
     </motion.section>
   );
 };
