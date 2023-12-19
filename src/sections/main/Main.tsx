@@ -7,6 +7,7 @@ import laptopImg from './../../assets/about.png';
 import CV from './../../assets/resume.pdf';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Typing from '../../components/Typing';
 
 export const Main = () => {
   const [sharedModal, setSharedModal] = useState(false);
@@ -18,15 +19,16 @@ export const Main = () => {
       exit={{ opacity: 0, y: 30 }}
       transition={{ duration: 0.5 }}
       id="main"
-      className={` relative container grid items-center`}>
-      {/* <MainTitle /> */}
-
-      <div className="flex flex-col sm:flex-row pt-3 justify-between max-w-7xl mx-auto">
+      className={` relative container `}>
+      <div className="h-min max-w-7xl mx-auto lg:py-16 flex items-center justify-center text-lg xl:text-3xl">
+        <Typing />
+      </div>
+      <div className="flex flex-col sm:flex-row pt-3 justify-between max-w-7xl mx-auto ">
         <div
           className="p-4 w-full flex flex-col sm:flex-row gap-3 items-center 
         max-w-sm lg:max-w-lg ">
-          <div className="leading-8">
-            <p className="first-letter:text-5xl first-line: text-xs sm:text-base indent-3 ">
+          <div className="leading-6 lg:leading-8  text-sm sm:text-base">
+            <p className="first-letter:text-5xl indent-3 ">
               Всем привет😉
             </p>
             Меня зовут <span className="text-main_red">Рустам</span>, я -
@@ -46,19 +48,20 @@ export const Main = () => {
             </a>{' '}
             <button
               onClick={() => setSharedModal(true)}
-              className="text-main-blue/80 flex gap-1 items-center justify-center duration-300 hover:text-blue-500 
-              iconMove">
+              className="text-main-blue/80 flex gap-1 items-center justify-center duration-300 hover:text-blue-500 iconMove">
               <span className="">Написать</span>
               <Sendme className="transition-transform duration-300 " />
             </button>
             <SharedModal setSharedModal={setSharedModal} sharedModal={sharedModal} />
           </div>
         </div>
-        <div className="max-w-sm lg:max-w-lg">
+        <div className="max-w-sm xl:max-w-lg">
           <img src={laptopImg} alt="about" className="img-fluid" />
         </div>
       </div>
-      <ScrollMouse />
+      <div className="absolute bottom-10 right-10 ">
+        <ScrollMouse />
+      </div>
     </motion.section>
   );
 };

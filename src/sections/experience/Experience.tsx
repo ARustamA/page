@@ -1,5 +1,5 @@
 import { Github } from '../../components/Github';
-import { motion, useAnimation, useInView } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { WorkTimeLine } from './WorkTimeLine';
 import { useRef } from 'react';
 
@@ -12,7 +12,7 @@ export const Experience = () => {
   return (
     <motion.section id="experience" key="experience" className="p-4 sm:px-4 pt-16">
       <h2 className="sm:text-xl  ">Опыт</h2>
-      <div className="flex flex-col sm:flex-row justify-between gap-3 max-w-5xl pb-3 mx-auto">
+      <div className="flex flex-col sm:flex-row justify-between gap-3 max-w-5xl mx-auto pb-3 ">
         <WorkTimeLine />
       </div>
       <div className="flex flex-col sm:flex-row gap-5 max-w-5xl mx-auto pb-3">
@@ -77,7 +77,9 @@ export const Experience = () => {
       <motion.div
         ref={refGit}
         className={`${
-          isInViewGit ? 'opacity-100' : ' opacity-0 -translate-y-48 translate-x-48'
+          isInViewGit
+            ? 'opacity-100 max-w-5xl mx-auto'
+            : ' opacity-0 -translate-y-48 translate-x-48'
         } transition-all transform-cpu delay-700 ease-in`}>
         <Github />
       </motion.div>

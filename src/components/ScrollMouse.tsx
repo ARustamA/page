@@ -34,7 +34,7 @@ export const ScrollMouse = () => {
 
   return showScroll ? (
     <button onClick={() => scrollToTarget('')}>
-      <Scroll className="absolute bottom-10 right-10 animate-bounce sm:w-10 sm:h-16" />
+      <Scroll className="animate-bounce sm:w-10 sm:h-16" />
     </button>
   ) : null;
 };

@@ -100,7 +100,7 @@ export const Slider: FC<IProp> = memo(({ data, isFull }) => {
               alt="image"
               {...handlers}
               className="rounded-lg h-full  absolute transform -translate-x-1/2 -translate-y-1/2"
-              style={{ objectFit: 'contain', borderRadius: '0.5rem' }} //убрать
+              style={{ objectFit: 'contain', borderRadius: '0.5rem' }} 
               initial={{
                 opacity: 0,
                 x: slideIndex === currentIndex ? 0 : -50,
@@ -141,7 +141,7 @@ export const Slider: FC<IProp> = memo(({ data, isFull }) => {
 
         {data.length > 1 && (
           <div className=" flex items-center justify-center gap-2 absolute -bottom-4 ">
-            {data.map((slide, slideIndex) => (
+            {data.map((_slide, slideIndex) => (
               <motion.div
                 key={slideIndex}
                 onClick={() => setCurrentIndex(slideIndex)}

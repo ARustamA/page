@@ -22,8 +22,12 @@ import { ReactComponent as Vite } from './../../assets/skills/vite.svg';
 import { ReactComponent as Css } from './../../assets/skills/css3.svg';
 import { ReactComponent as Github } from './../../assets/skills/github.svg';
 import { ReactComponent as Eslint } from './../../assets/skills/eslint.svg';
+import Gym from './../../assets/portfolio/gym.gif';
+import Bakery from './../../assets/portfolio/bakery.gif';
+import Nomad from './../../assets/portfolio/nomad.gif';
 import { TCard } from '../../sections/skills/Skills';
 import { ComponentType, SVGProps } from 'react';
+import { IPortCard } from '../../components/slider/SliderScreen';
 
 export const languages: TCard[] = [
   { id: '1', title: 'HTML5', icon: Html },
@@ -116,8 +120,35 @@ export const experiences: IExperience[] = [
       "Применил технологию WebSocket для обеспечения непрерывного взаимодействие между фронтендом и бэкендом(нативный WebSocket).",
       "Реализовал валидацию форм с использованием Formik и Yup",
     ],
-    tools:[
+    tools: [
       "TS", "React", "WebSocket", "REST API"
     ]
   },
 ];
+
+export const portfolioCards: IPortCard[] = [
+  {
+    id: "1",
+    title: "Gym",
+    gif: Gym,
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis non eos possimus, sit quidem, optio tempora fuga deleniti minima minus cupiditate modi dolore commodi illo, unde omnis voluptatem voluptatibus adipisci?',
+    git:"github.com/ARustamA/gym1",
+    demo:"gym1-three.vercel.app"
+  },
+  {
+    id: "2",
+    title: "Bakery",
+    gif: Bakery,
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis non eos possimus, sit quidem, optio tempora fuga deleniti minima minus cupiditate modi dolore commodi illo, unde omnis voluptatem voluptatibus adipisci?',
+    git:"github.com/ARustamA/bakery",
+    demo:"bakery-three.vercel.app/"
+  },
+  {
+    id: "3",
+    title: "Nomad water",
+    gif: Nomad,
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis non eos possimus, sit quidem, optio tempora fuga deleniti minima minus cupiditate modi dolore commodi illo, unde omnis voluptatem voluptatibus adipisci?',
+    git:"github.com/ARustamA/NomWatLandingPage",
+    demo:"nom-wat-landing-page.vercel.app"
+  },
+]

@@ -82,10 +82,10 @@ select {
   padding: 0;
   background-image: linear-gradient(
     to top,
-    rgb(42, 14, 104),
-    rgb(6, 0, 20),
-    rgb(6, 0, 20),
-    rgb(42, 14, 104)
+    #2a0e68,
+    #060014,
+    #060014,
+    #2a0e68
   );
 
   color: rgba(255, 237, 237, 0.87);
@@ -123,7 +123,6 @@ section {
   min-height: 100dvh;
   /* height: 100dvh; */
   width: 100%;
-
   margin-left: auto;
   margin-right: auto;
 }

@@ -18,7 +18,7 @@ export const FullSliderImage: FC<IProp> = ({ isOpenModal, setIsOpenModal, data }
       isOpenModal={isOpenModal}
       setIsOpenModal={setIsOpenModal}
       modalId="sliderFullScreen"
-      className=" !max-w-6xl h-dvh flex items-center justify-center ">
+      className="  max-w-5xl mx-auto h-dvh grid items-center justify-center ">
       <div className="relative w-full max-w-5xl h-[70vh] max-h-[70vh]">
         <button
           className="hidden sm:flex items-center justify-center 

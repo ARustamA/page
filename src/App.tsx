@@ -51,8 +51,17 @@ function App(): JSX.Element {
           <Experience />
 
           <Projects />
+          <motion.section
+            id="contacts"
+            key="contacts"
+            className="p-4 sm:px-4 pt-16">
 
-          <motion.footer id="contacts" key="contacts"></motion.footer>
+              {/*service_v0l8k2q  */}
+              {/*  */}
+
+            </motion.section>
+
+          <motion.footer id="footer" key="footer"></motion.footer>
         </>
       )}
     </AnimatePresence>
