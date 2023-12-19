@@ -7,8 +7,8 @@ import { Header } from './sections/header/Header';
 import { Skills } from './sections/skills/Skills';
 import { Main } from './sections/main/Main';
 import { useEffect, useState } from 'react';
-import { About } from './sections/About';
 import { Projects } from './sections/projects/Projects';
+import { Contacts } from './sections/contacts/Contacts';
 
 function App(): JSX.Element {
   const [isLoading, setIsLoading] = useState(true);
@@ -51,15 +51,7 @@ function App(): JSX.Element {
           <Experience />
 
           <Projects />
-          <motion.section
-            id="contacts"
-            key="contacts"
-            className="p-4 sm:px-4 pt-16">
-
-              {/*service_v0l8k2q  */}
-              {/*  */}
-
-            </motion.section>
+          <Contacts />
 
           <motion.footer id="footer" key="footer"></motion.footer>
         </>

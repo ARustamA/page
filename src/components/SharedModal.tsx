@@ -6,6 +6,7 @@ import { ReactComponent as Close } from '../assets/icons/Close.svg';
 import { ReactComponent as Gmail } from '../assets/icons/gmail.svg';
 import { ReactComponent as Vk } from '../assets/icons/vk.svg';
 import { Modal } from './common';
+import { gmailUrl, urlTelegram, vkontakteUrl, whatsappUrl } from '../assets/constants/constants';
 
 type IProps = {
   sharedModal: boolean;
@@ -16,7 +17,7 @@ type CardProps = {
   icon: FC<{ className: string }>;
 };
 
-const SharedCard = ({ shareUrl, icon: Icon }: CardProps) => {
+export const SharedCard = ({ shareUrl, icon: Icon }: CardProps) => {
   return (
     <a
       href={shareUrl}
@@ -31,10 +32,7 @@ const SharedCard = ({ shareUrl, icon: Icon }: CardProps) => {
 };
 
 export const SharedModal = ({ sharedModal, setSharedModal }: IProps) => {
-  const urlTelegram = `https://t.me/RustamAkhm`;
-  const whatsappUrl = `whatsapp://send?phone=+77476085495&text=Привет😉 Меня зовут`;
-  const vkontakteUrl = `https://vk.com/share.php?url=arstm&title=${encodeURIComponent(`Привет 😉 Меня зовут`)}`;
-  const gmailUrl = `mailto:rakhmetyanov@gmail.com?subject=${encodeURIComponent('Привет 😉')}&body=Привет 😉 Меня зовут`;
+
 
   return (
     <Modal
@@ -43,7 +41,7 @@ export const SharedModal = ({ sharedModal, setSharedModal }: IProps) => {
       setIsOpenModal={setSharedModal}
       className="bg-indigo-900   
         !top-1/2 !left-1/2 !bottom-auto !-translate-x-1/2 !-translate-y-1/2  
-        border grid gap-5 !rounded-lg">
+        border grid gap-5 !rounded-lg max-w-sm">
       <div className="flex items-center justify-between pb-3">
         <span className="text-lg italic">Напишите мне ❤️</span>
         <button onClick={() => setSharedModal(false)}>

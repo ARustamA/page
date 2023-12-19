@@ -2,7 +2,6 @@ import { ReactComponent as Sendme } from './../../assets/icons/sendme.svg';
 import { ReactComponent as Save } from './../../assets/icons/save.svg';
 import { ScrollMouse } from './../../components/ScrollMouse';
 import { SharedModal } from './../../components/SharedModal';
-import { MainTitle } from './../../sections/main/MainTitle';
 import laptopImg from './../../assets/about.png';
 import CV from './../../assets/resume.pdf';
 import { motion } from 'framer-motion';
