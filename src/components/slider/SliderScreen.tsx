@@ -115,12 +115,14 @@ export const SliderScreen = ({ portfolioCard }: { portfolioCard: IPortCard[] }) 
                 <a
                   href={'https://' + portfolioCard[imageIndex].git}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="h-12 p-2 rounded-full bg-blue2  hover:bg-main_red transition-all duration-500">
                   <Github />
                 </a>
                 <a
                   href={'https://' + portfolioCard[imageIndex].demo}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-blue2 hover:bg-main_red transition-all duration-500 h-12 p-3 rounded-3xl">
                   Демо
                 </a>
@@ -136,12 +138,12 @@ export const SliderScreen = ({ portfolioCard }: { portfolioCard: IPortCard[] }) 
         </motion.div>
       </AnimatePresence>
       <button
-        className={`absolute top-0 lg:top-[50%] -right-4 lg:-right-24 bg-blue2 rounded-full p-1`}
+        className={`absolute top-0 lg:top-[50%] -right-4 xl:-right-24 bg-blue2 rounded-full p-1 z-10`}
         onClick={() => paginate(1)}>
         <ChevronRight />
       </button>
       <button
-        className={`absolute  top-0 lg:top-[50%] -left-4 lg:-left-24  bg-blue2 rounded-full p-1`}
+        className={`absolute  top-0 lg:top-[50%] -left-4 xl:-left-24  bg-blue2 rounded-full p-1 z-10`}
         onClick={() => paginate(-1)}>
         <ChevronLeft />
       </button>

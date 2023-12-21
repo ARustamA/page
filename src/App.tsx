@@ -9,6 +9,8 @@ import { Main } from './sections/main/Main';
 import { useEffect, useState } from 'react';
 import { Projects } from './sections/projects/Projects';
 import { Contacts } from './sections/contacts/Contacts';
+import { Footer } from './sections/Footer';
+import { ScrollMouse } from './components/ScrollMouse';
 
 function App(): JSX.Element {
   const [isLoading, setIsLoading] = useState(true);
@@ -16,7 +18,7 @@ function App(): JSX.Element {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 5000);
+    }, 4000);
   }, []);
   // const [width, setWidth] = useState(1200);
 
@@ -34,7 +36,7 @@ function App(): JSX.Element {
         <>
           <motion.div
             key="main"
-            className={` w-screen  transition-all  ease-in-out`}
+            className={`transition-all  ease-in`}
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
             exit={{ opacity: 0, scale: 0.5, transition: { duration: 0.5 } }}>
@@ -51,9 +53,15 @@ function App(): JSX.Element {
           <Experience />
 
           <Projects />
+          <ParallaxText baseVelocity={-2}>
+            JavaScript HTML CSS ECMAScript TypeScript React.js Webpack
+          </ParallaxText>
           <Contacts />
 
-          <motion.footer id="footer" key="footer"></motion.footer>
+          <Footer />
+          <div className="absolute bottom-10 right-10 ">
+            <ScrollMouse />
+          </div>
         </>
       )}
     </AnimatePresence>

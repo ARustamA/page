@@ -22,7 +22,7 @@ export const SharedCard = ({ shareUrl, icon: Icon }: CardProps) => {
     <a
       href={shareUrl}
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
       className="grid items-center justify-center p-4 shadow shadow-main_blue
       hover:shadow-inner hover:shadow-blue-light  border rounded-full transition-all
         text-text_dark  hover:text-blue-light">

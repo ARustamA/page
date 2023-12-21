@@ -1,67 +1,50 @@
-import { ReactComponent as Github } from '../assets/skills/github.svg';
+import { ReactComponent as Github } from '../assets/skills/github2.svg';
 import { ReactComponent as Telegram } from '../assets/icons/Telegram.svg';
 import { ReactComponent as Linkedin } from '../assets/icons/linkedin.svg';
 import { ReactComponent as Instagram } from '../assets/icons/instagram.svg';
+import { motion } from 'framer-motion';
+import { github, instagram, linkedin, urlTelegram } from '../assets/constants/constants';
 
+const iconStyle = 'hover:text-main_red transition-all duration-300';
 function Footer() {
   let date = new Date();
   let year = date.getFullYear();
   return (
-    <div className="flex flex-col lg:flex-row">
-      <div>
-        <p>
-          <h3>Designed and Developed by Soumyajit Behera</h3>
-        </p>
-        <p>
-          <h3>Copyright © {year} SB</h3>
-        </p>
-        <div>
-          <ul className="footer-icons">
-            <li className="social-icons">
-              <a
-                href="https://github.com/soumyajit4419"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Github />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://twitter.com/Soumyajit4419"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Telegram />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.linkedin.com/in/soumyajit4419/"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Linkedin />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.instagram.com/soumyajit4419"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Instagram />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <motion.footer
+      id="footer"
+      key="footer"
+      className="flex flex-col lg:flex-row gap-2 lg:gap-5 py-5 items-center justify-between max-w-5xl mx-auto">
+      <p>
+        <h3>Developed by <span className='text-main_red'>A Rustam A</span></h3>
+      </p>
+      <p>
+        <h3>Copyright © {year} A R A</h3>
+      </p>
+
+      <ul className="flex gap-3 ">
+        <li>
+          <a href={github} target="_blank" rel="noopener noreferrer">
+            <Github className={iconStyle} />
+          </a>
+        </li>
+        <li>
+          <a href={urlTelegram} target="_blank" rel="noopener noreferrer">
+            <Telegram className={iconStyle} />
+          </a>
+        </li>
+        <li>
+          <a href={linkedin} target="_blank" rel="noopener noreferrer">
+            <Linkedin className={iconStyle} />
+          </a>
+        </li>
+        <li>
+          <a href={instagram} target="_blank" rel="noopener noreferrer">
+            <Instagram className={iconStyle} />
+          </a>
+        </li>
+      </ul>
+    </motion.footer>
   );
 }
 
-export default Footer;
+export { Footer };

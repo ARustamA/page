@@ -30,6 +30,9 @@ import { ComponentType, SVGProps } from 'react';
 import { IPortCard } from '../../components/slider/SliderScreen';
 
 export const urlTelegram = `https://t.me/RustamAkhm`;
+export const linkedin = `https://www.linkedin.com/in/rustam-akhmetyanov/`;
+export const github = `https://github.com/ARustamA`;
+export const instagram = `https://www.instagram.com/pyctjk/`;
 export const whatsappUrl = `whatsapp://send?phone=+77476085495&text=Привет😉 Меня зовут`;
 export const vkontakteUrl = `https://vk.com/share.php?url=arstm&title=${encodeURIComponent(`Привет 😉 Меня зовут`)}`;
 export const gmailUrl = `mailto:rakhmetyanov@gmail.com?subject=${encodeURIComponent('Привет 😉')}&body=Привет 😉 Меня зовут`;

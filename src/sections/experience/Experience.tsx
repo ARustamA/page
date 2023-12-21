@@ -5,12 +5,12 @@ import { useRef } from 'react';
 
 export const Experience = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref);
   const refGit = useRef(null);
-  const isInViewGit = useInView(ref, { once: true });
+  const isInViewGit = useInView(ref);
 
   return (
-    <motion.section id="experience" key="experience" className="p-4 sm:px-4 pt-16">
+    <motion.section id="experience" key="experience" className="p-4 sm:px-4 overflow-hidden">
       <h2 className="sm:text-xl  ">Опыт</h2>
       <div className="flex flex-col sm:flex-row justify-between gap-3 max-w-5xl mx-auto pb-3 ">
         <WorkTimeLine />

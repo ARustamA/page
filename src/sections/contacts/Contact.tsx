@@ -80,8 +80,8 @@ const Contact = () => {
   return (
     <div
       className={` flex xl:flex-row flex-col-reverse gap-5 overflow-hidden w-full max-w-5xl mx-auto`}>
-      <motion.div className="flex-[0.75] max-w-xl p-8 rounded-2xl">
-        <form ref={formRef} onSubmit={handleSubmit} className=" flex flex-col gap-8">
+      <motion.div className="flex-[0.75] max-w-xl p-4 lg:p-8 rounded-2xl">
+        <form ref={formRef} onSubmit={handleSubmit} className=" flex flex-col gap-3 lg:gap-8">
           <motion.label className="flex flex-col" custom={1} variants={nameAnimation}>
             <span className="text-white font-medium mb-4 ">Ваше имя</span>
             <input
@@ -120,7 +120,8 @@ const Contact = () => {
             custom={3}
             variants={nameAnimation}
             type="submit"
-            className="bg-blue2 hover:bg-slate-800 py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-blue2 bg-opacity-80">
+            className="bg-blue2  outline-none w-fit text-white font-bold bg-opacity-80 shadow-inner
+            p-4 h-min text-sm border  hover:rounded-se-3xl hover:rounded-es-3xl hover:scale-110 transition-all delay-200 whitespace-nowrap">
             {loading ? 'Отправка...' : 'Отправить'}
           </motion.button>
         </form>

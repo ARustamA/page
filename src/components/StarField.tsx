@@ -1,5 +1,6 @@
 import { useWindowSize } from '../utils/hooks/useWindowSize';
 import { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 
 const StarField = () => {
   const starFieldRef = useRef<HTMLDivElement>(null);
@@ -39,7 +40,16 @@ const StarField = () => {
     }
   }, [numStars]);
 
-  return <div ref={starFieldRef} key="star-field" className="star-field"></div>;
+  return (
+    <motion.div
+      ref={starFieldRef}
+      key="star-field"
+      className="star-field"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 30 }}
+      transition={{ duration: 0.5 }}></motion.div>
+  );
 };
 
 export { StarField };

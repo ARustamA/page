@@ -69,6 +69,7 @@ select {
     -webkit-font-smoothing: antialiased;
     scroll-snap-type: y mandatory;
     -webkit-font-smoothing: antialiased;
+    scroll-padding-top: 60px;
   }
 }
 
