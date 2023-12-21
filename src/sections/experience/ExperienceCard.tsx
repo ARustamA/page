@@ -1,6 +1,6 @@
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { IExperience } from '../../assets/constants/constants';
+import { IExperience } from '../../assets/constants/types';
 
 export const ExperienceCard = ({ experience }: { experience: IExperience }) => {
   const { company_name, date, icon: Icon, iconBg, points, title, tools } = experience;
@@ -18,9 +18,7 @@ export const ExperienceCard = ({ experience }: { experience: IExperience }) => {
       icon={<Icon />}>
       <div className="">
         <h3 className="text-main-blue text-2xl font-bold">{title}</h3>
-        <p className="text-secondary text-lg font-semibold" >
-          {company_name}
-        </p>
+        <p className="text-secondary text-lg font-semibold">{company_name}</p>
       </div>
 
       <ul className="mt-5 list-disc ml-5 space-y-2  ">
@@ -32,7 +30,7 @@ export const ExperienceCard = ({ experience }: { experience: IExperience }) => {
           </li>
         ))}
       </ul>
-      <div className='flex flex-wrap'>
+      <div className="flex flex-wrap">
         {tools.map((point, index) => (
           <span
             key={`experience-point-${index}`}

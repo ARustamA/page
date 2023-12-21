@@ -22,12 +22,16 @@ import { ReactComponent as Vite } from './../../assets/skills/vite.svg';
 import { ReactComponent as Css } from './../../assets/skills/css3.svg';
 import { ReactComponent as Github } from './../../assets/skills/github.svg';
 import { ReactComponent as Eslint } from './../../assets/skills/eslint.svg';
+import { ReactComponent as Telegram } from '../../assets/icons/Telegram.svg';
+import { ReactComponent as WhatsApp } from '../../assets/icons/WhatsApp.svg';
+import { ReactComponent as Linkedin } from '../../assets/icons/linkedin.svg';
+import { ReactComponent as Sendme } from '../../assets/icons/sendme.svg';
 import Gym from './../../assets/portfolio/gym.gif';
 import Bakery from './../../assets/portfolio/bakery.gif';
 import Nomad from './../../assets/portfolio/nomad.gif';
-import { TCard } from '../../sections/skills/Skills';
-import { ComponentType, SVGProps } from 'react';
-import { IPortCard } from '../../components/slider/SliderScreen';
+
+
+import { IContactCard, IExperience, IPortCard, TCard } from './types';
 
 export const urlTelegram = `https://t.me/RustamAkhm`;
 export const linkedin = `https://www.linkedin.com/in/rustam-akhmetyanov/`;
@@ -36,6 +40,8 @@ export const instagram = `https://www.instagram.com/pyctjk/`;
 export const whatsappUrl = `whatsapp://send?phone=+77476085495&text=Привет😉 Меня зовут`;
 export const vkontakteUrl = `https://vk.com/share.php?url=arstm&title=${encodeURIComponent(`Привет 😉 Меня зовут`)}`;
 export const gmailUrl = `mailto:rakhmetyanov@gmail.com?subject=${encodeURIComponent('Привет 😉')}&body=Привет 😉 Меня зовут`;
+
+export const statUrl = `https://github-readme-stats.vercel.app/api/top-langs?username=ARustamA&show_icons=true&locale=ru&layout=donut&theme=midnight-purple`;
 
 export const languages: TCard[] = [
   { id: '1', title: 'HTML5', icon: Html },
@@ -74,16 +80,7 @@ export const tools1: TCard[] = [
   { id: '4', title: 'MongoDB', icon: MongoDB },
   { id: '5', title: 'Firebase', icon: Firebase }
 ];
-export type IExperience = {
-  title: string;
-  company_name: string;
-  icon: ComponentType<SVGProps<SVGSVGElement>>;
 
-  iconBg: string;
-  date: string;
-  points: string[];
-  tools: string[];
-}
 
 export const experiences: IExperience[] = [
   {
@@ -140,23 +137,54 @@ export const portfolioCards: IPortCard[] = [
     title: "Gym",
     gif: Gym,
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis non eos possimus, sit quidem, optio tempora fuga deleniti minima minus cupiditate modi dolore commodi illo, unde omnis voluptatem voluptatibus adipisci?',
-    git:"github.com/ARustamA/gym1",
-    demo:"gym1-three.vercel.app"
+    git: "github.com/ARustamA/gym1",
+    demo: "gym1-three.vercel.app"
   },
   {
     id: "2",
     title: "Bakery",
     gif: Bakery,
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis non eos possimus, sit quidem, optio tempora fuga deleniti minima minus cupiditate modi dolore commodi illo, unde omnis voluptatem voluptatibus adipisci?',
-    git:"github.com/ARustamA/bakery",
-    demo:"bakery-three.vercel.app/"
+    git: "github.com/ARustamA/bakery",
+    demo: "bakery-three.vercel.app/"
   },
   {
     id: "3",
     title: "Nomad water",
     gif: Nomad,
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis non eos possimus, sit quidem, optio tempora fuga deleniti minima minus cupiditate modi dolore commodi illo, unde omnis voluptatem voluptatibus adipisci?',
-    git:"github.com/ARustamA/NomWatLandingPage",
-    demo:"nom-wat-landing-page.vercel.app"
+    git: "github.com/ARustamA/NomWatLandingPage",
+    demo: "nom-wat-landing-page.vercel.app"
+  },
+]
+
+export const contactCards: IContactCard[] = [
+  {
+    icon: {
+      icon: Telegram,
+      title: "Telegram"
+    },
+    button: "@RustamAkhm",
+    link: urlTelegram,
+    icon2: Sendme
+  },
+  {
+    icon: {
+      icon: WhatsApp,
+      title: "WhatsApp"
+    },
+    button: "+77476085495",
+    link: whatsappUrl,
+    title: 'Написать',
+    icon2: Sendme
+  },
+  {
+    icon: {
+      icon: Linkedin,
+      title: "Linkedin"
+    },
+    button: "@rustam-akhmetyanov",
+    link: linkedin,
+
   },
 ]

@@ -7,7 +7,7 @@ export const Experience = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const refGit = useRef(null);
-  const isInViewGit = useInView(ref);
+  const isInViewGit = useInView(ref, { once: true });
 
   return (
     <motion.section id="experience" key="experience" className="p-4 sm:px-4 overflow-hidden">

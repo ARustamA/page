@@ -1,33 +1,11 @@
 import { useState, useRef, ChangeEventHandler, FormEventHandler } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+import { imgAnimation, nameAnimation } from './variants';
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
-  const nameAnimation = {
-    hidden: {
-      x: -300,
-      opacity: 0
-    },
-    visible: (custom: number) => ({
-      x: 0,
-      opacity: 1,
-      transition: { delay: custom * 0.2 }
-    })
-  };
-  const imgAnimation = {
-    hidden: {
-      x: 100,
-      y: -200,
-      opacity: 0
-    },
-    visible: (custom: number) => ({
-      x: 0,
-      y: 0,
-      opacity: 1,
-      transition: { delay: custom * 0.2 }
-    })
-  };
+
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -76,12 +54,21 @@ const Contact = () => {
         }
       );
   };
-  const inputStyle = `bg-slate-800 py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium opacity-80 shadow-blue2 shadow-inner`;
+
+  const inputStyle = `bg-slate-800 py-4 px-6 placeholder:text-secondary text-white 
+  rounded-lg outline-none border-none font-medium opacity-80 shadow-blue2 shadow-inner`;
+
   return (
     <div
       className={` flex xl:flex-row flex-col-reverse gap-5 overflow-hidden w-full max-w-5xl mx-auto`}>
       <motion.div className="flex-[0.75] max-w-xl p-4 lg:p-8 rounded-2xl">
-        <form ref={formRef} onSubmit={handleSubmit} className=" flex flex-col gap-3 lg:gap-8">
+        <motion.form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className=" flex flex-col gap-3 lg:gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.3 }}>
           <motion.label className="flex flex-col" custom={1} variants={nameAnimation}>
             <span className="text-white font-medium mb-4 ">Ваше имя</span>
             <input
@@ -104,7 +91,7 @@ const Contact = () => {
               className={inputStyle}
             />
           </motion.label>
-          <motion.label className="flex flex-col" custom={3} variants={imgAnimation}>
+          <motion.label className="flex flex-col" custom={3} variants={nameAnimation}>
             <span className="text-white font-medium mb-4">Ваше сообщение</span>
             <textarea
               rows={7}
@@ -118,13 +105,13 @@ const Contact = () => {
 
           <motion.button
             custom={3}
-            variants={nameAnimation}
+            variants={imgAnimation}
             type="submit"
             className="bg-blue2  outline-none w-fit text-white font-bold bg-opacity-80 shadow-inner
             p-4 h-min text-sm border  hover:rounded-se-3xl hover:rounded-es-3xl hover:scale-110 transition-all delay-200 whitespace-nowrap">
             {loading ? 'Отправка...' : 'Отправить'}
           </motion.button>
-        </form>
+        </motion.form>
       </motion.div>
     </div>
   );

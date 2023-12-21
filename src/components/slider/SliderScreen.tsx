@@ -5,6 +5,7 @@ import { ReactComponent as ChevronLeft } from '../../assets/icons/ChevronLeft.sv
 import { ReactComponent as ChevronRight } from '../../assets/icons/ChevronRight.svg';
 import { cn } from '../../utils/cn';
 import { ReactComponent as Github } from '../../assets/portfolio/github2.svg';
+import { IPortCard } from '../../assets/constants/types';
 
 const variants = {
   enter: (direction: number) => {
@@ -34,14 +35,6 @@ const variants = {
       // w: 0,
     };
   }
-};
-export type IPortCard = {
-  id: string;
-  title: string;
-  gif: string;
-  description: string;
-  git: string;
-  demo?: string;
 };
 
 const swipeConfidenceThreshold = 10000;
