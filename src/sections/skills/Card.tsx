@@ -1,4 +1,4 @@
-import { TCard } from './Skills';
+import { TCard } from '../../assets/constants/types';
 
 export const renderCard = ({ id, title, icon: Icon }: TCard) => {
   return (
