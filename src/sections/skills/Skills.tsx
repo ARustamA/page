@@ -32,7 +32,7 @@ export const Skills = () => {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0.3 }}
+        viewport={{ amount: 0.3, once: true }}
         className={`${boxStyle} flex items-center justify-center h-48 xl:h-0 `}>
         <motion.a
           href={github}
@@ -51,7 +51,7 @@ export const Skills = () => {
         className={`${boxStyle}`}
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0.5 }}>
+        viewport={{ amount: 0.5, once: true }}>
         <span className={`${titleStyle}`}>Языки</span>
         {languages.map((item, index) => (
           <motion.div key={item.id} custom={index + 1} variants={languageAnimation}>
@@ -64,7 +64,7 @@ export const Skills = () => {
         className={`${boxStyle} `}
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0.5 }}>
+        viewport={{ amount: 0.5, once: true }}>
         <span className={`${titleStyle}`}>Экосистема React</span>
         {frontendTech.map((item, index) => (
           <motion.div key={item.id} custom={index + 1} variants={reactAnimation}>
@@ -77,7 +77,7 @@ export const Skills = () => {
         className={`${boxStyle}`}
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0.5 }}>
+        viewport={{ amount: 0.5, once: true }}>
         <span className={`${titleStyle}`}>Стилизация</span>
         {styles.map((item, index) => (
           <motion.div key={item.id} custom={index + 1} variants={styleAnimation}>
@@ -90,7 +90,7 @@ export const Skills = () => {
         className={`${boxStyle}`}
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0.5 }}>
+        viewport={{ amount: 0.5, once: true }}>
         <span className={`${titleStyle}`}>Инструменты</span>
         {tools.map((item, index) => (
           <motion.div key={item.id} custom={index + 1} variants={toolsAnimation}>
@@ -103,7 +103,7 @@ export const Skills = () => {
         className={`${boxStyle}`}
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0.5 }}>
+        viewport={{ amount: 0.5, once: true }}>
         {tools1.map((item, index) => (
           <motion.div key={item.id} custom={index + 1} variants={tools2Animation}>
             {renderCard({ id: item.id, title: item.title, icon: item.icon })}

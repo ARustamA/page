@@ -22,7 +22,7 @@ export const Contacts = () => {
           className="flex flex-col gap-3 lg:pt-16"
           initial="hidden"
           whileInView="visible"
-          viewport={{ amount: 0.3 }}>
+          viewport={{ amount: 0.3, once: true }}>
           {contactCards.map((item, index) => (
             <motion.div
               key={item.link}

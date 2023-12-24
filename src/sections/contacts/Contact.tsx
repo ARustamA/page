@@ -68,7 +68,7 @@ const Contact = () => {
           className=" flex flex-col gap-3 lg:gap-8"
           initial="hidden"
           whileInView="visible"
-          viewport={{ amount: 0.3 }}>
+          viewport={{ amount: 0.3,once: true }}>
           <motion.label className="flex flex-col" custom={1} variants={nameAnimation}>
             <span className="text-white font-medium mb-4 ">Ваше имя</span>
             <input

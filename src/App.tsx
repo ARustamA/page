@@ -20,12 +20,6 @@ function App(): JSX.Element {
       setIsLoading(false);
     }, 4000);
   }, []);
-  // const [width, setWidth] = useState(1200);
-
-  // useEffect(() => {
-  //   setWidth(window.innerWidth);
-  // }, []);
-  // https://github.com/soumyajit4419/Portfolio
 
   return (
     <AnimatePresence mode="wait">
@@ -59,9 +53,6 @@ function App(): JSX.Element {
           <Contacts />
 
           <Footer />
-          <div className="absolute bottom-10 right-10 ">
-            <ScrollMouse />
-          </div>
         </>
       )}
     </AnimatePresence>

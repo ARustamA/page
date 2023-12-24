@@ -134,27 +134,27 @@ export const experiences: IExperience[] = [
 export const portfolioCards: IPortCard[] = [
   {
     id: "1",
-    title: "Gym",
-    gif: Gym,
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis non eos possimus, sit quidem, optio tempora fuga deleniti minima minus cupiditate modi dolore commodi illo, unde omnis voluptatem voluptatibus adipisci?',
-    git: "github.com/ARustamA/gym1",
-    demo: "gym1-three.vercel.app"
-  },
-  {
-    id: "2",
     title: "Bakery",
     gif: Bakery,
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis non eos possimus, sit quidem, optio tempora fuga deleniti minima minus cupiditate modi dolore commodi illo, unde omnis voluptatem voluptatibus adipisci?',
+    description: 'Нужно было в сжатые сроки сделать лендинг - сайт для пекарни. Дизайн и анимации разрабатывались самостоятельно.',
     git: "github.com/ARustamA/bakery",
     demo: "bakery-three.vercel.app/"
   },
   {
-    id: "3",
+    id: "2",
     title: "Nomad water",
     gif: Nomad,
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis non eos possimus, sit quidem, optio tempora fuga deleniti minima minus cupiditate modi dolore commodi illo, unde omnis voluptatem voluptatibus adipisci?',
+    description: 'Лендинг для компании доставки воды была сверстана по готовому дизайну в Figma, с адаптивом под мобильные устройства.',
     git: "github.com/ARustamA/NomWatLandingPage",
     demo: "nom-wat-landing-page.vercel.app"
+  },
+  {
+    id: "3",
+    title: "Gym",
+    gif: Gym,
+    description: 'По готовому дизайну из Figma, необходимо было за короткий срок сверстать лендинг для фитнес зала. ',
+    git: "github.com/ARustamA/gym1",
+    demo: "gym1-three.vercel.app"
   },
 ]
 
