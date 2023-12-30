@@ -126,6 +126,7 @@ export const SliderScreen = ({ portfolioCard }: { portfolioCard: IPortCard[] }) 
               src={portfolioCard[imageIndex].gif}
               alt={portfolioCard[imageIndex].title}
               className="rounded-lg "
+              
             />
           </div>
         </motion.div>
