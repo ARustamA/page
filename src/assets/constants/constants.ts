@@ -85,21 +85,6 @@ export const tools1: TCard[] = [
 export const experiences: IExperience[] = [
   {
     title: "Frontend-разработчик",
-    company_name: 'Волонтерство, проект "Касание"',
-    icon: React,
-    iconBg: "#17063b",
-    date: "Декабря 2023 — по н.в.",
-    points: [
-      "Разработка части функционала админки использованием React.js",
-      "Написание модулей для управления данными в бд Firebase",
-      "Рефакторинг некоторой части клиентского приложения(VK app)",
-    ],
-    tools: [
-      "TypeScript", "React", "Firebase", "VK-UI"
-    ]
-  },
-  {
-    title: "Frontend-разработчик",
     company_name: "HIT KAZAKHSTAN",
     icon: React,
     iconBg: "#410902",
@@ -111,6 +96,21 @@ export const experiences: IExperience[] = [
     ],
     tools: [
       "TS", "React", "ReduxToolkit", "REST API"
+    ]
+  },
+  {
+    title: "Frontend-разработчик",
+    company_name: 'Волонтерство, проект "Касание"',
+    icon: React,
+    iconBg: "#17063b",
+    date: "Декабря 2023 — Декабря 2023",
+    points: [
+      "Разработка части функционала админки использованием React.js",
+      "Написание модулей для управления данными в бд Firebase",
+      "Рефакторинг некоторой части клиентского приложения(VK app)",
+    ],
+    tools: [
+      "TypeScript", "React", "Firebase", "VK-UI"
     ]
   },
   {
