@@ -15,10 +15,10 @@ function Footer() {
       key="footer"
       className="flex flex-col lg:flex-row gap-2 lg:gap-5 py-5 items-center justify-between max-w-5xl mx-auto">
       <p>
-        <h3>Developed by <span className='text-main_red'>A Rustam A</span></h3>
+        Developed by <span className='text-main_red'>A Rustam A</span>
       </p>
       <p>
-        <h3>Copyright © {year} A R A</h3>
+        Copyright © {year} A R A
       </p>
 
       <ul className="flex gap-3 ">

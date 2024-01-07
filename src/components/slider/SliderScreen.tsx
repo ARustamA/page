@@ -69,7 +69,7 @@ export const SliderScreen = ({ portfolioCard }: { portfolioCard: IPortCard[] }) 
     setStartX(0);
     setStartY(0);
   };
-
+  const buttonStyle = `absolute top-0 lg:top-[50%]  bg-blue2 rounded-full p-1 z-10`;
   return (
     <div className="w-full  relative">
       <AnimatePresence initial={false} custom={direction}>
@@ -107,6 +107,7 @@ export const SliderScreen = ({ portfolioCard }: { portfolioCard: IPortCard[] }) 
               <div className="flex gap-3 items-center justify-center">
                 <a
                   href={'https://' + portfolioCard[imageIndex].git}
+                  aria-label="Открыть код на Github"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="h-12 p-2 rounded-full bg-blue2  hover:bg-main_red transition-all duration-500">
@@ -115,6 +116,7 @@ export const SliderScreen = ({ portfolioCard }: { portfolioCard: IPortCard[] }) 
                 <a
                   href={'https://' + portfolioCard[imageIndex].demo}
                   target="_blank"
+                  aria-label="Открыть на демо"
                   rel="noopener noreferrer"
                   className="bg-blue2 hover:bg-main_red transition-all duration-500 h-12 p-3 rounded-3xl">
                   Демо
@@ -126,19 +128,18 @@ export const SliderScreen = ({ portfolioCard }: { portfolioCard: IPortCard[] }) 
               src={portfolioCard[imageIndex].gif}
               alt={portfolioCard[imageIndex].title}
               className="rounded-lg "
-              
             />
           </div>
         </motion.div>
       </AnimatePresence>
-      <button
-        className={`absolute top-0 lg:top-[50%] -right-4 xl:-right-24 bg-blue2 rounded-full p-1 z-10`}
-        onClick={() => paginate(1)}>
+      <button className={cn(buttonStyle + `-right-4 xl:-right-24`)} aria-label="Next" onClick={() => paginate(1)}>
+        <span className="sr-only">Next</span>
         <ChevronRight />
+
       </button>
-      <button
-        className={`absolute  top-0 lg:top-[50%] -left-4 xl:-left-24  bg-blue2 rounded-full p-1 z-10`}
-        onClick={() => paginate(-1)}>
+      <button className={cn(buttonStyle + `-left-4 xl:-left-24`)} aria-label="Previous" onClick={() => paginate(-1)}>
+        <span className="sr-only">Previous</span>
+
         <ChevronLeft />
       </button>
     </div>

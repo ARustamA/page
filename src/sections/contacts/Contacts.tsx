@@ -36,7 +36,7 @@ export const Contacts = () => {
               <button type="button" className="hover:text-main_red">
                 {item.button}
               </button>
-              <a href={item.link} className={linkStyle}>
+              <a href={item.link} className={linkStyle} aria-label={item.icon.title}>
                 {item.title && <span className="">{item.title}</span>}
                 {item.icon2 && <item.icon2 className="transition-transform duration-300 " />}
               </a>

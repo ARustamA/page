@@ -47,6 +47,7 @@ const BackgroundCanvas = () => {
     };
 
     let interval: NodeJS.Timer | number | undefined = setInterval(draw, 1000 / state.fps);
+    
   }, []);
 
   return <canvas id="canvas" className="text-green-bg"></canvas>;

@@ -10,7 +10,6 @@ import { useEffect, useState } from 'react';
 import { Projects } from './sections/projects/Projects';
 import { Contacts } from './sections/contacts/Contacts';
 import { Footer } from './sections/Footer';
-import { ScrollMouse } from './components/ScrollMouse';
 
 function App(): JSX.Element {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,7 +28,7 @@ function App(): JSX.Element {
       ) : (
         <>
           <motion.div
-            key="main"
+            key="main-section"
             className={`transition-all  ease-in`}
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
