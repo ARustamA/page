@@ -9,7 +9,7 @@ import { portfolioCards } from '../../assets/constants/constants';
 
 export const Projects = () => {
   return (
-    <motion.section id="Projects" key="Projects" className="p-4 grid gap-3 min-h-screen overflow-hidden">
+    <motion.section id="projects" key="Projects" className="p-4 grid gap-3 min-h-screen overflow-hidden">
       <h3 className="sm:text-xl">Проекты</h3>
       <div className="w-full max-w-5xl mx-auto">
         <SliderScreen portfolioCard={portfolioCards} />

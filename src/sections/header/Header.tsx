@@ -6,7 +6,7 @@ const ITEMS = [
   // { id: 'about', title: 'ОБО МНЕ' },
   { id: 'skills', title: 'НАВЫКИ' },
   { id: 'experience', title: 'ОПЫТ' },
-  { id: 'portfolio', title: 'ПРОЕКТЫ' },
+  { id: 'projects', title: 'ПРОЕКТЫ' },
   // { id: 'resume', title: 'РЕЗЮМЕ' },
   { id: 'contacts', title: 'КОНТАКТЫ' }
 ];
