@@ -42,7 +42,7 @@ export const vkontakteUrl = `https://vk.com/share.php?url=arstm&title=${encodeUR
 export const gmailUrl = `mailto:rakhmetyanov@gmail.com?subject=${encodeURIComponent('Привет 😉')}&body=Привет 😉 Меня зовут`;
 
 export const statUrl = `https://github-readme-stats.vercel.app/api/top-langs?username=ARustamA&show_icons=true&locale=ru&layout=donut&theme=midnight-purple`;
-
+export const resumeLink = 'https://hh.ru/resume_converter/%D0%90%D1%85%D0%BC%D0%B5%D1%82%D1%8C%D1%8F%D0%BD%D0%BE%D0%B2%20%D0%A0%D1%83%D1%81%D1%82%D0%B0%D0%BC%20%D0%90%D0%B9%D1%80%D0%B0%D1%82%D0%BE%D0%B2%D0%B8%D1%87.pdf?hash=f25e1593ff0bb8190d0039ed1f30686f446d70&type=pdf&hhtmSource=resume&hhtmFrom=resume_list'
 export const languages: TCard[] = [
   { id: '1', title: 'HTML5', icon: Html },
   { id: '2', title: 'CSS3', icon: Css },

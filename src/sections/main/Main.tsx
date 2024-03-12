@@ -7,6 +7,7 @@ import CV from './../../assets/resume.pdf';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import Typing from '../../components/Typing';
+import { resumeLink } from '../../assets/constants/constants';
 
 export const Main = () => {
   const [sharedModal, setSharedModal] = useState(false);
@@ -36,8 +37,8 @@ export const Main = () => {
           </div>
           <div className="flex flex-col sm:flex-row gap-5 justify-between">
             <a
-              href={CV}
-              download=""
+              href={resumeLink}
+              target="_blank"
               className="p-4 h-min text-xs border  hover:rounded-se-3xl 
             hover:rounded-es-3xl hover:scale-110 transition-all delay-200 whitespace-nowrap
             flex gap-1 items-center">
